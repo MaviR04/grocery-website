@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="82.450325mm"
+   height="53.580643mm"
+   viewBox="0 0 82.450325 53.580643"
+   version="1.1"
+   id="svg1"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath14">
+      <use
+         x="0"
+         y="0"
+         xlink:href="#g13"
+         id="use14" />
+    </clipPath>
+  </defs>
+  <g
+     id="layer1"
+     transform="translate(-30.743226,-40.806453)">
+    <g
+       id="g14"
+       clip-path="url(#clipPath14)"
+       style="stroke:#ffe535;stroke-width:2.2;stroke-dasharray:none;stroke-opacity:1">
+      <g
+         id="g13"
+         style="stroke:#ffe535;stroke-width:2.2;stroke-dasharray:none;stroke-opacity:1">
+        <path
+           style="fill:#ebe110;fill-opacity:0;stroke:#ffe535;stroke-width:2.2;stroke-dasharray:none;stroke-opacity:1"
+           d="m 63.516128,40.806452 c 0,0 -27.322581,3.193547 -31.580645,28.387095 -4.258064,25.193548 4.258064,25.193548 4.258064,25.193548 l 77.000003,-3.548386 -0.70968,-37.258063 z"
+           id="path1" />
+        <path
+           style="fill:#ebe110;fill-opacity:0;stroke:#ffe535;stroke-width:2.2;stroke-dasharray:none;stroke-opacity:1"
+           d="m 111.41935,53.935484 -75.225803,2.12903 z"
+           id="path3" />
+        <path
+           style="fill:#ebe110;fill-opacity:0;stroke:#ffe535;stroke-width:2.2;stroke-dasharray:none;stroke-opacity:1"
+           d="m 39.032259,77.354836 c 0,0 -9.935485,-8.870965 4.96774,-16.322579 14.903227,-7.451611 10.645161,25.193548 -4.96774,16.322579 z"
+           id="path6" />
+        <path
+           style="fill:#ebe110;fill-opacity:0;stroke:#ffe535;stroke-width:2.2;stroke-dasharray:none;stroke-opacity:1"
+           d="m 67.064516,79.129032 c 0,0 -7.451614,-9.225807 6.387097,-13.129033 13.838709,-3.903225 1.064514,15.612904 -6.387097,13.129033 z"
+           id="path8" />
+        <ellipse
+           style="fill:#ebe110;fill-opacity:0;stroke:#ffe535;stroke-width:2.2;stroke-dasharray:none;stroke-opacity:1"
+           id="path9"
+           cx="93.145157"
+           cy="79.306458"
+           rx="5.1451616"
+           ry="7.6290321" />
+        <ellipse
+           style="fill:#ebe110;fill-opacity:0;stroke:#ffe535;stroke-width:2.2;stroke-dasharray:none;stroke-opacity:1"
+           id="path10"
+           cx="98.822578"
+           cy="64.048386"
+           rx="8.6935482"
+           ry="4.0806451" />
+        <ellipse
+           style="fill:#ebe110;fill-opacity:0;stroke:#ffe535;stroke-width:2.2;stroke-dasharray:none;stroke-opacity:1"
+           id="path12"
+           cx="52.870968"
+           cy="86.225807"
+           rx="7.0967741"
+           ry="3.9032259" />
+      </g>
+    </g>
+  </g>
+</svg>

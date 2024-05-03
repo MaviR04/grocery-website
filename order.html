@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/order.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+
+        <div class="banner">
+            <div class="text">Urban Harvest</div>
+        </div>
+        <nav class="topnav">
+            <a href="index.html">Home</a>
+            <a href="#">About Us</a>
+            <div class="dropdown">
+            <a href=#>Products</a>
+            <div class="dropcontent">
+                <a href="dairy.html">Dairy</a>
+                <a href="makeup.html">Makeup</a>
+                <a href="#">Produce</a>
+            </div>
+            </div>
+            <a href="#">Order</a>
+            <a href="#">Loyalty Progam</a>
+        </nav>      
+
+    </header>
+    <main>
+        <article>
+            <section>
+            <div class="set">
+                <form name="order" method="get" onsubmit="this.submit(); this.reset(); return false;">
+                    <div class="heading">Submit Your Orders</div>
+                    <fieldset>
+                        <div class="subheading">Personal Information</div>
+                        <div class="pinfo set">
+                        <label for="fname">First Name: </label>
+                        <input type="text" id="fname" name="fname">
+
+                        <label for="lname">Last Name: </label>
+                        <input type="text" id="lname" name="lname">
+
+                        <label for="YOB">Year of Birth: </label>
+                        <input type="date" name="YOB" id="YOB">
+
+                        <label for="Phone no">Phone Number: </label>
+                        <input type="tel" name="t-no" id="t-no">
+
+                        <label for="email">Email Address: </label>
+                        <input type="email" name="email" id="email">
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <div class="subheading">Billing Information</div>
+                        <div class="billing set">
+                            <label for="Address">Address</label>
+                            <textarea name="address" id="address" cols="30" rows="7"></textarea>
+
+                            <label for="zip">Zipcode</label>
+                            <input type="text" name="zipcode" id="zipcode">
+
+                            <label for="pay_meth" id="pay" class="head-label">Payment Method</label>    
+                            <div class="pay-meth">
+                                <div>
+                                <input type="radio" name="pay-meth" id="credit-card">
+                                <label for="card">Credit/Debit Card</label>
+                                </div>
+                                <div>
+                                <input type="radio" name="pay-meth" id="COD">
+                                <label for="cod">Cash On delivery</label>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <div class="subheading">Shippping Information</div>
+                        <div x-data="{open:false}" class="shipping set">
+                            <label for="rec-method" class="head-label">Method of Receiving</label>
+                            <div>
+                            <input type="radio" name="meth" id="pick" value="false">
+                            <label for="Pickup">Pick up from store</label>
+                            </div>
+                            <div>
+                            <input type="radio" name="meth" id="del" value="true" >
+                            <label for="Del">Delivery</label>
+                            </div>
+                            <label for="city" id="select">City: </label>
+                            <select name="city" id="city">
+                                <option value="Kandy"> Kandy <option>
+                                    <option value=" Matale">  Matale <option>
+                                    <option value=" Nuwara Eliy">  Nuwara Eliy <option>
+                                    <option value="Ampara "> Ampara  <option>
+                                    <option value="Batticaloa"> Batticaloa <option>
+                                    <option value=" Trincomalee">  Trincomalee <option>
+                                    <option value="Anuradhapura"> Anuradhapura <option>
+                                    <option value=" Polonnaruwa">  Polonnaruwa <option>
+                                    <option value="Jaffna"> Jaffna <option>
+                                    <option value=" Kilinochchi">  Kilinochchi <option>
+                                    <option value=" Mannar">  Mannar <option>
+                                    <option value=" Mullaitivu">  Mullaitivu <option>
+                                    <option value=" Vavuniya">  Vavuniya <option>
+                                    <option value="Kurunegala"> Kurunegala <option>
+                                    <option value=" Puttalam">  Puttalam <option>
+                                    <option value="Kegalle"> Kegalle <option>
+                                    <option value=" Ratnapura">  Ratnapura <option>
+                                    <option value="Galle"> Galle <option>
+                                    <option value=" Hambantota">  Hambantota <option>
+                                    <option value=" Matara">  Matara <option>
+                                    <option value="Badulla"> Badulla <option>
+                                    <option value=" Monaragala">  Monaragala <option>
+                                    <option value="Colombo"> Colombo <option>
+                                    <option value=" Gampaha">  Gampaha <option>
+                                    <option value=" Kalutara">  Kalutara <option>
+                            </select>
+
+                        <div>
+                            <label for="Address" class="head-label"> Delivery Address</label>
+                            <div>
+                            <input type="radio" name="addy" id="same" value="false">
+                            <label for="same">Use Billing Address</label>
+                            </div>
+                            <div>
+                            <input type="radio" name="addy" id="diff" value="true">
+                            <label for="diff">Use different Address</label>
+                            </div>
+                            <div  id="del-addy">
+                            <label for="delivery-notes" >Delivery Address</label>
+                            <textarea name="delivery-notes" id="address" cols="50" rows="5"></textarea>
+                            </div>
+                        </div>
+
+                            <label for="delivery-notes"  id="select">Delivery Notes</label>
+                            <textarea name="delivery-notes" id="address" cols="10" rows="5"></textarea>
+
+                            <label for="sec-phone">Secondary phone number(optional)</label>
+                            <input type="tel" name="sec-phone" id="sec-phone">
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <div class="subheading">Order Information</div>
+                        <div class="set">
+                            <label for="pr-type">Product Type</label>
+                            <select name="pr-type" id="pr-type">
+                                <option value="Produce">Produce</option>
+                                <option value="Dairy">Dairy</option>
+                                <option value="Makeup">Makeup</option>
+                            </select>
+                            <label for="pr-name">Product name</label>
+                            <input type="text" name="product-name" id="pr-name">
+                            <label for="pr-quan">Quantity</label>
+                            <input type="number" name="quan" id="quan">
+                            <input type="submit" id="submit" value="Add to cart">
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            </section>
+        </article>
+    </main>
+    <script>
+        function submit_form() {
+        document.order.submit();
+        document.order.reset(); 
+        }
+        </script>
+</body>
+</html>

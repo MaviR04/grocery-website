@@ -1,0 +1,508 @@
+@keyframes popin{
+    0%{
+        opacity: 0;
+        scale: 0.75;
+    }
+    100%{
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes slideinleft{
+    0%{
+        transform: translateX(-300px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes slideinright{
+    0%{
+        transform: translateX(300px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+
+
+
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color:  rgb(255, 252, 252);
+
+}
+
+
+.banner .text{
+    padding: 0;
+    background-size: cover;
+    background: linear-gradient(to right,rgb(139, 24, 233),rgb(19, 239, 173) );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.banner{
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 60px;
+    background:rgb(31, 33, 60);
+    padding: 15px;
+}
+
+
+
+.topnav{
+    display: flex;
+    gap: 80px;
+    justify-content: center;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+}
+
+.topnav a{
+    font-family: 'Nunito Sans';
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    transition: all 0.3s ;
+}
+
+.topnav:hover > a, .topnav:hover>.dropdown{
+    opacity: 0.3;
+}
+
+.topnav:hover > a:hover, .topnav:hover>.dropdown:hover{
+    opacity: 1;
+    transform: translateY(-10px);
+    color: rgb(30, 208, 95);
+}
+
+.dropdown{
+    position: relative;
+    display: inline-block;
+    transition: all 0.3s ;
+    z-index: 2;
+}
+
+.dropdown a{
+    display: inline-block;
+}
+
+.dropcontent {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    z-index: 1;
+  }
+
+.dropcontent a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown:hover{
+    color: rgb(87, 241, 85);
+}
+
+
+.dropcontent a:hover {color:rgb(87, 241, 85)}
+
+.dropdown:hover .dropcontent {display: block;}
+
+
+.container{
+    border-radius: 10px;
+
+
+}
+
+.carousel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+}
+.list{  
+    max-width: 100%;
+    width: 100%;
+    height:100%;
+    display: flex;
+    scroll-behavior: smooth;
+    overflow-y: hidden;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    cursor: pointer;
+    
+}
+
+
+.card{
+    width: 100%;
+    height: 100%;
+}
+.item{
+    scroll-snap-align: center;
+    height: 100%;
+    width:1230px;
+    animation: scrolling linear;
+    animation-timeline: scroll(root);
+}
+
+
+.subheading{
+    text-align: center;
+    font-family: 'Montserrat';
+    color: #3de318;
+    font-weight: 500;
+    font-size: 40px;
+    margin: 0;
+
+
+}
+
+.intro{
+    display: grid;
+    place-items: center;
+}
+
+.content{
+    padding: 2px;
+    text-align:left;
+    font-size: 22px;
+    font-family:'Nunito sans';
+    overflow: scroll;
+    height: 100%;
+}
+
+.paracontainer{ 
+    width:1230px ;
+    height: 240px;
+    margin-top: 100px;
+    background-image: linear-gradient(163deg, #00ff75 0%, #3de318 100%);
+    box-shadow:  20px 20px 60px #cecece, -20px -20px 60px #ffffff; 
+    border-radius: 20px;
+    transition: all .3s;
+    animation: popin 0.5s;
+    animation-timeline: view();
+    animation-range:entry;
+
+}
+
+.para{
+    width:1230px ;
+    height: 240px;
+    border-radius: 0px;
+    background:url(./images/actualblob.svg);
+    overflow: hidden;
+    background-size: cover; 
+    transition: all .5s;
+    display: flex;
+    padding:1px;
+    gap: 20px;
+    animation: popin 2s;
+    animation-timeline: view();
+    animation-range:entry 700px;
+
+}
+.para img{
+    width: 150px;
+    object-fit: cover;
+}
+
+
+.makeup .subheading{
+    color: #e5a495;
+}
+
+.makeup .para{
+    background: url(./images/makeup.svg);
+    background-size: cover;
+}
+
+.makeup .paracontainer{
+    background-image: linear-gradient(163deg, #e08975 0%, #b9311f 100%);
+}
+
+.makeup .paracontainer:hover {
+    box-shadow: 0px 0px 30px 1px rgba(226, 76, 60, 0.3);
+   }
+
+.dairy .subheading{
+    color:#ef9b2d
+}
+
+.dairy .para{
+    background: url(./images/dairy.svg);
+    background-size: cover;
+}
+
+
+.dairy .paracontainer{
+    background-image: linear-gradient(163deg, #f9cd94 0%, #c8725f 100%);
+}
+
+
+.dairy .paracontainer:hover {
+    box-shadow: 0px 0px 30px 1px rgba(226, 141, 60, 0.3);
+   }
+
+
+
+
+.para:hover{
+    transform: scale(0.992  );
+    border-radius: 20px;
+}
+
+.paracontainer:hover {
+    box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
+   }
+
+
+
+.listcontainer{ 
+    width:1071px ;
+    height:500px;
+    margin-top:20px; 
+    background-image: linear-gradient(163deg, #00ff75 0%, #3de318 100%);
+    box-shadow:  20px 20px 60px #cecece, -20px -20px 60px #ffffff;
+    margin-top: 100px;  
+    border-radius: 20px;
+    transition: all .3s;
+
+}
+
+.textcontainer{
+    width: 100%;
+}
+
+.lists{
+    width:1071px ;
+    height:500px;
+    border-radius: 0px;
+    background:url(./images/blob-scene-haikei.svg);
+    background-size: cover;
+    transition: all .5s; 
+    padding:1px;
+    text-align: center !important;
+    overflow-y:scroll;
+}
+
+.lists ul{
+    display: inline-block;
+    font-size: 25px ;
+    overflow: hidden;
+
+}
+
+.lists ol{
+    display: inline-block;
+    font-size: 25px ;
+    overflow: hidden;
+
+
+}
+
+.lists:hover{
+    transform: scale(0.992  );
+    border-radius: 20px;
+}
+
+.listcontainer:hover {
+    box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
+}
+
+.revHead{
+    font-size: 100px;
+    margin-top: 150px;
+    font-family: poppins;
+    animation: popin 2s;
+    animation-timeline: view();
+}
+
+.commentWrapper{
+    width: 100%;
+    margin-top: 150px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5,150px);
+    gap: 50px;
+    grid-template-areas: 
+        "com1 ."
+        ". com2"
+        "com3 ."
+        ". com4"
+        "com5 .";
+}
+
+.commentcontainer{
+    width:auto;
+    height: 150px;
+    border-radius: 18px;
+    background: #a0e4c1;
+    transition: all .5s;
+    display: flex;
+    justify-content:flex-end;
+    padding:1px;
+    gap: 20px;  
+    margin: 0;
+}
+.commentcontainer:nth-child(odd){
+    justify-content:flex-start;
+}
+
+.commentcontainer:hover{
+    transform: translateX(35px);
+}
+
+.commentcontainer:nth-child(even):hover{
+    transform: translateX(-35px);
+}
+
+.commentcontainer .content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:'poppins';
+    font-size: 28px;
+    font-weight: 400;
+    overflow: hidden;
+}
+
+
+#com1{
+    animation: slideinleft 0.5s;
+    animation-timeline: view();
+    grid-area: com1;
+}
+
+#com2{
+    animation: slideinright 0.5s;
+    animation-timeline: view();
+    grid-area: com2;
+}
+
+#com3{
+    animation: slideinleft 0.5s;
+    animation-timeline: view();
+    grid-area: com3;
+ }
+ 
+ 
+#com4{
+    animation: slideinright 0.5s;
+    animation-timeline: view();
+    grid-area: com4;
+ }
+
+ 
+#com5{
+    animation: slideinleft 0.5s;
+    animation-timeline: view();
+    animation-range:entry ;
+    grid-area: com5;
+ }
+
+
+.pfp img{
+    height: 100%;
+    width: 150px;
+    border-radius: 10px;
+}
+
+
+.commentcontainer .content{
+    font-size: 20px;
+}
+
+
+
+footer .topnav{
+    margin-top: 100px;
+}
+
+@media (max-width:1000px){
+    .list{
+        display: inline-block ;
+    }
+
+    .item{
+        height: 20% ;
+        width:100% ;
+    }
+
+    .paracontainer{
+        margin:0 ;
+        width: 100% ;
+    }
+    .para{
+        width: 100% ;
+        display: block;
+        overflow: scroll;
+    }
+
+    .content{
+        overflow: hidden;
+    }
+
+    .listcontainer{
+        width: 100% ;
+        margin-left: 0 ;
+        margin-right: 0;
+    }
+
+    .lists{
+        width: 100% ;
+    }
+
+    .commentWrapper{
+        grid-template-areas: 
+        "com1 com1"
+        "com2 com2"
+        "com3 com3"
+        "com4 com4"
+        "com5 com5" ;
+        row-gap: 30px;
+    }
+ 
+    .commentcontainer{
+        overflow: hidden ;
+        padding: 4px ;
+    }
+
+    .revHead{
+        font-size: 2rem ;
+    }
+
+    .topnav{
+        flex-wrap: wrap;
+    }
+
+    #com4{
+        animation: slideinright 0.5s;
+        animation-timeline: view();
+        grid-area: com4;
+     }
+     .para img{
+        width: 300px;
+
+
+    }
+
+}
