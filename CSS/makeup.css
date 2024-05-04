@@ -252,3 +252,39 @@ select{
     height:100px;
     background-color: transparent;
 }
+
+@media (max-width:600px){
+
+    .makebg{
+        height: calc(85vh + 20vw);
+
+    }
+
+    .revHead{
+        font-size: 15vw;
+    }
+
+    .topnav{
+        display: none;
+    }
+
+    table tr td:last-child{
+        border-color: #ee1e75;
+        margin-bottom:20vh ;
+    }
+
+    table tr td,table tr th{
+        display: block;
+    } 
+}
+
+@media (min-width:600px) and (max-width:950px){
+    table tr th{
+        color:  #a852e9;
+    }
+
+    
+    .topnav{
+        display: none;
+    }
+}
