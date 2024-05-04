@@ -438,6 +438,13 @@ footer .topnav{
 }
 
 @media (max-width:1000px){
+    .text{
+        font-size: 10vw;
+    }
+
+    .topnav{
+        display: none;
+    }
     .list{
         display: inline-block ;
     }
@@ -448,17 +455,26 @@ footer .topnav{
     }
 
     .paracontainer{
-        margin:0 ;
+        margin-top:100px;
         width: 100% ;
+        height: 300px;
     }
     .para{
         width: 100% ;
         display: block;
         overflow: scroll;
+        height: 300px;
     }
 
     .content{
-        overflow: hidden;
+        overflow:visible;
+
+    }
+
+    .para img{
+        float: left;
+        width: 300px;
+        height: 80%;
     }
 
     .listcontainer{
@@ -487,7 +503,7 @@ footer .topnav{
     }
 
     .revHead{
-        font-size: 2rem ;
+        font-size: 15vw ;
     }
 
     .topnav{
@@ -499,10 +515,27 @@ footer .topnav{
         animation-timeline: view();
         grid-area: com4;
      }
-     .para img{
-        width: 300px;
+
+}
 
 
+@media (max-width:600px){
+    .para img{
+        float: left;
+        width: 100%;
+        height: 80%;
     }
 
+}
+
+@media (max-width:400px){
+    .list{
+        display:flex ;
+    }
+
+    .item{
+        overflow-x: scroll;
+        height:40vh;
+        width: 100vw;
+    }
 }
