@@ -89,3 +89,31 @@ body{
 
 .dropdown:hover .dropcontent {display: block;}
 
+
+.revHead{
+    font-size: clamp(8vw,1rem,100px);
+    margin-top: 0px;
+    font-weight: 600;
+    font-family: 'poppins';
+    color: #ffffff;
+    text-align: center;
+}
+
+.splash{
+    background: linear-gradient(rgb(168, 239, 137), rgb(33, 231, 73));
+    display: flex;
+    gap: 20px;
+}   
+
+.cards{
+    font-family: poppins;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    flex-direction: column;
+    background: white;
+    width: 400px;
+    height: 200px;
+}
