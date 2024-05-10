@@ -1,3 +1,23 @@
+@keyframes zoomin{
+    0%{
+        background-size: 1000px;
+    }
+
+    100%{
+        background-size: 400px  ;
+    }
+}
+ @keyframes slidearound{
+    0%,100%{
+        background-position: bottom center;
+    }
+
+    50%{
+        background-position: top center;
+    }
+ }
+
+
 body{
     margin: 0;
     padding: 0;
@@ -91,7 +111,7 @@ body{
 
 
 .revHead{
-    font-size: clamp(8vw,1rem,100px);
+    font-size: clamp(6vw,1rem,100px);
     margin-top: 0px;
     font-weight: 600;
     font-family: 'poppins';
@@ -103,7 +123,20 @@ body{
     background: linear-gradient(rgb(168, 239, 137), rgb(33, 231, 73));
     display: flex;
     gap: 20px;
+    align-items: center;
+    padding: 50px;
 }   
+
+#vege{
+    background: url(./images/ProductImg/Vegetables/vegeback.jpg);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size:cover;
+    animation: slidearound 5s ease-in-out infinite;
+    animation-fill-mode:forwards ;
+    font-size: 150px;
+}
 
 .cards{
     font-family: poppins;
@@ -115,5 +148,69 @@ body{
     flex-direction: column;
     background: white;
     width: 400px;
+    height: 250px;
+    transition: 0.5s ;
+}
+
+.cards img{
+    width:250px;    
+    height:200px;
+    object-fit: cover;
+    border-radius: 10px;
+    height: 0;
+    transition: 0.5s;
+}
+
+.cardhead{
+    font-size: 25px;
+    font-weight: 500;
+    font-size: 18;
+}   
+
+.cards:hover{
+    background: black;
+    color: white;
+    height: 400px;
+}
+
+.cards:hover img{
+    display:block;
     height: 200px;
+}
+
+
+.gallery{
+    margin-top: 100px;
+    display: grid;
+    gap:200px ;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+}
+
+.card{
+    font-family: poppins;
+    display: flex;
+    border-radius: 10px;
+    flex-direction: column;
+    background: rgb(36, 57, 175);
+    width: 300px;
+    height: 400px;
+    transition: 0.5s ;
+}
+
+.card .desc{
+    background-color:black ;
+    width: 100%;
+    height: 20%;
+    align-self: flex-end;
+}
+
+.card .img{
+    background-color: aqua;
+    height: 80%;
+}
+
+.card .desc {
+    font: 'poppins';
+    font-size: 25px;
+    color: #f1f1f1;
 }
