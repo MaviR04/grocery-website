@@ -31,6 +31,7 @@ body{
     background-size: cover;
     background: linear-gradient(to right,rgb(139, 24, 233),rgb(19, 239, 173) );
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -121,8 +122,9 @@ body{
 
 .splash{
     background: linear-gradient(rgb(168, 239, 137), rgb(33, 231, 73));
+    justify-content: center;
     display: flex;
-    gap: 20px;
+    flex-wrap: wrap;
     align-items: center;
     padding: 50px;
 }   
@@ -222,4 +224,26 @@ body{
 .card .desc .price{
     color: #f1f1f1bd;
     font-size: 18px;
+}
+
+@media (max-width:600px){
+    .topnav{
+        display: none;
+    }
+    .splash{
+        font-size: 15vw;
+        gap: 0px;
+    }
+
+    #vege{
+        font-size: 20vw;
+    }
+
+    .cards{
+        margin-left: 0;
+        margin-right: 0;
+        overflow: hidden;
+        font-size: 20px;
+        width: 100%;
+    }
 }
