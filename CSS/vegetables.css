@@ -1,10 +1,10 @@
-@keyframes zoomin{
+@keyframes slideleftnright{
     0%{
-        background-size: 1000px;
+      background-position: left;
     }
 
     100%{
-        background-size: 400px  ;
+        background-position:right   ;
     }
 }
  @keyframes slidearound{
@@ -148,6 +148,8 @@ body{
     border-radius: 10px;
     margin: 10px;
     flex-direction: column;
+    align-content: center;
+    justify-content: center;
     background: white;
     width: 200px;
     height: 250px;
@@ -177,7 +179,9 @@ body{
 .cards:hover img{
     display:block;
     height: 200px;
+    width: 100%;
 }
+
 
 
 .gallery{
@@ -197,6 +201,7 @@ body{
     height: 300px;
     transition: 0.5s ;
     box-shadow: 10px 10px 10px #29292955;
+    overflow-y: hidden;
 }
 
 .card .desc{
@@ -218,15 +223,39 @@ body{
 }
 .card .img{
     height: 80%;
-    width: 100%;
+    width: 100%;    
+    transition: 0.5s;
+}
+
+.card:hover .img{
+    transform: translateY(-25px);
+
+}
+
+.card:hover .desc .price{
+    color: rgb(1, 11, 6);
 }
 
 .card .desc .price{
     color: #f1f1f1bd;
     font-size: 18px;
+    transition: 0.5s;
 }
 
-@media (max-width:600px){
+.veghead{
+    background: rgb(33,231,73);
+    background: linear-gradient(56deg, rgba(33,231,73,1) 0%, rgba(26,227,114,1) 19%, rgba(26,227,112,1) 28%, rgba(0,212,255,1) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 10px;
+    font-size: 8em;
+    font-family: poppins;
+    font-weight: 600;
+    text-align: center;
+}
+
+@media (max-width:620px){
     .topnav{
         display: none;
     }
@@ -239,11 +268,27 @@ body{
         font-size: 20vw;
     }
 
+    .veghead{
+        font-size: 4em;
+    }
+
     .cards{
         margin-left: 0;
         margin-right: 0;
         overflow: hidden;
         font-size: 20px;
         width: 100%;
+    }
+
+
+    .cards:active{
+        background: black;
+        color: white;
+        height: 400px;
+    }
+
+    .gallerywrapper{
+        display: grid;
+        place-content: center;
     }
 }
