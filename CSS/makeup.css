@@ -55,6 +55,10 @@ body{
     transition: all 0.3s ;
 }
 
+.topnavcont svg,.topnavcont input{
+    display: none;
+}
+
 .topnav:hover > a, .topnav:hover>.dropdown{
     opacity: 0.3;
 }
@@ -253,6 +257,81 @@ select{
     background-color: transparent;
 }
 
+
+@media (max-width:750px){
+    .banner{
+        position: relative;
+        z-index: 4;
+    }
+    .topnav {
+        padding:10px ;
+        background-color: #ffffff;
+        flex-direction: column;
+        width:60% ;
+        gap: 5px;
+        padding-top: 10px;
+        text-align: center;
+        display: flex;
+        position: absolute;
+        transform: translateY(-400px);
+        transition: 0.5s;
+    }
+
+    .topnav a{
+        color: black;
+    }
+
+    .topnavcont svg{
+        position: absolute;
+        z-index: 5;
+    }
+
+    .topnavcont svg{
+        padding: 2px;
+        background-color: #ffffff;
+        display: block;
+        position: absolute;
+        z-index: 2;
+        left: 47%;
+        transform: rotate(0deg);
+        transition: 0.5s;
+        border-radius: 50%;
+    }
+
+    .topnav .dropcontent{
+        position: static;
+    }
+
+
+    .topnavcont svg:active{
+        transform: rotate(0deg);
+    }
+
+
+    .topnavcont{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+
+    }
+
+    .topnavcont input{
+        display: none;
+        position: absolute;
+        left: 49%;
+        z-index: 3;
+    }
+
+
+    .topnavcont input:checked~.topnav{
+        transform: translateY(0);
+    }
+
+}
+
+
+
 @media (max-width:600px){
 
     .makebg{
@@ -264,9 +343,6 @@ select{
         font-size: 15vw;
     }
 
-    .topnav{
-        display: none;
-    }
 
     table tr td:last-child{
         border-color: #ee1e75;
@@ -284,7 +360,5 @@ select{
     }
 
     
-    .topnav{
-        display: none;
-    }
+ 
 }
