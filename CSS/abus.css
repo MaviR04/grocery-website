@@ -383,6 +383,10 @@ tfoot{
     }
 
     table tr td{
+        border-bottom: 4px solid rgb(255, 255, 255);
+    }
+
+    table tr td{
         display: block;
         text-align: center;
     }

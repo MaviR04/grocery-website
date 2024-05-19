@@ -446,9 +446,7 @@ footer .topnav{
         font-size: 10vw;
     }
 
-    .topnav a{
-        font-size: 2vw;
-    }
+   
    
     .list{
         display: inline-block ;
@@ -511,10 +509,7 @@ footer .topnav{
         font-size: 15vw ;
     }
 
-    .topnav{
-        flex-wrap: wrap;
-    }
-
+    
     #com4{
         animation: slideinright 0.5s;
         animation-timeline: view();
