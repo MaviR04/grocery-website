@@ -257,8 +257,32 @@ select{
     background-color: transparent;
 }
 
+.botnav{
+    margin-top: 100px;
+    display: flex;
+    gap: 80px;
+    justify-content: center;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+}
+
+.botnav a{
+    font-family: 'Nunito Sans';
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    transition: all 0.3s ;
+}
 
 @media (max-width:750px){
+    .botnav{
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
     .banner{
         position: relative;
         z-index: 4;
