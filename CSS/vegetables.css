@@ -174,13 +174,13 @@ body{
     font-size: 18;
 }   
 
-.cards:hover{
+.cards:hover,.cards:active{
     background: black;
     color: white;
     height: 400px;
 }
 
-.cards:hover img{
+.cards:hover img, .cards:active img{
     display:block;
     height: 200px;
     width: 100%;

@@ -181,6 +181,10 @@ body{
     color:rgba(255, 255, 255, 0.814);
 
 }
+
+.heading{
+    text-align: center;
+}
 .gaia{
     font-family: 'Montserrat';
     font-size: 15vw;
@@ -344,12 +348,12 @@ body{
 #hecline{
     background: linear-gradient(to right,rgb(234,123,123),rgb(234,32,123));
 }
-.card:hover .front-card{
+.card:hover .front-card,.card:active .front-card{
     transform: rotateX(180deg)
 
 }
 
-.card:hover .back-card{
+.card:hover .back-card, .card:active .back-card{
     transform: rotateX(0deg);
 }
 
@@ -507,6 +511,10 @@ form{
 
     .card-cont{
         height: 800px;
+    }
+
+    .gaia{
+        font-size: 100px;
     }
     
     form{

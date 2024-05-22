@@ -292,7 +292,6 @@ body{
 }
 
 .botnav{
-    margin-top: 100px;
     display: flex;
     gap: 80px;
     justify-content: center;
