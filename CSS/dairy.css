@@ -309,6 +309,33 @@ body{
     transition: all 0.3s ;
 }
 
+#obutt{
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 0;
+    background-color:#f9cd94 ;
+    font-family: poppins;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    transition: 0.5s ;
+    margin-bottom: 20px;
+}
+
+#obutt:hover{
+   transform: translateY(-15px);
+   background-color: #4b31dc;
+   color:   rgb(40, 211, 154);
+   cursor:pointer;
+}
+
+.buttoncontainer{
+    display: flex;
+    justify-content: center;
+    background-color: #C62368;
+}
+
 @media (max-width:750px){
     .banner{
         position: relative;
