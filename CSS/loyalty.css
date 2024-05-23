@@ -523,3 +523,9 @@ form{
     }
 
 }
+
+@media(prefers-reduced-motion){
+    #the,#rhea,#chronos{
+        animation: unset;
+    }
+}
