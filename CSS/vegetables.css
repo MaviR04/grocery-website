@@ -134,7 +134,7 @@ body{
 }   
 
 #vege{
-    background: url(./images/ProductImg/Vegetables/vegeback.jpg);
+    background: url(./images/ProductImg/Vegetables/vegeback.webp);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
