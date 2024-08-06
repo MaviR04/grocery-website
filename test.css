@@ -134,6 +134,7 @@ h2{
 
 .name{
     font-size: 20px;
+    font-weight: 600;
 }
 .card:hover .counter{
     height: 17px;
@@ -148,10 +149,12 @@ h2{
     opacity: 0;
     width: 50px;
     transition: 0.2s;
+    background: #FFFFFF;
+    color: #000000;
 }
 
 .card .desc{
-    background-color:rgb(61, 203, 75) ;
+    background-color:#1f213c ;
     width: 100%;
     height: 20%;
     align-self: flex-end;
