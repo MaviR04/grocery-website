@@ -2,15 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Order page for the grocery items">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="shortcut icon" href="./CSS/images/favicon/Icon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./CSS/order.css">
-    <title>Order Page</title>
+    <link rel="stylesheet" href="test.css">
+    <title>Document</title>
 </head>
 <body>
     <header>
@@ -28,7 +29,7 @@
         <div class="dropcontent">
             <a href="dairy.html">Dairy</a>
             <a href="makeup.html">Makeup</a>
-            <a href="order.html">Produce</a>
+            <a href="vegetables.html">Produce</a>
         </div>
         </div>
         <a href="order.html">Order</a>  
@@ -36,146 +37,437 @@
     </nav>
     </div>    
     </header>
-    <main>
-        <article>
-            <section>
-            <div class="set-cont">
-            <div class="set">
-                <form name="order" method="get">
-                    <div class="heading">Submit Your Orders</div>
-                    <fieldset>
-                        <div class="subheading">Personal Information</div>
-                        <div class="pinfo set">
-                        <label for="fname">First Name: </label>
-                        <input type="text" id="fname" name="fname">
 
-                        <label for="lname">Last Name: </label>
-                        <input type="text" id="lname" name="lname">
-
-                        <label for="YOB">Year of Birth: </label>
-                        <input type="date" name="YOB" id="YOB">
-
-                        <label for="Phone no">Phone Number: </label>
-                        <input type="tel" name="t-no" id="t-no">
-
-                        <label for="email">Email Address: </label>
-                        <input type="email" name="email" id="email">
-                        </div>
-                    </fieldset>
-
-                    <fieldset>
-                        <div class="subheading">Billing Information</div>
-                        <div class="billing set">
-                            <label for="Address">Address</label>
-                            <textarea name="address" id="address" cols="30" rows="7"></textarea>
-
-                            <label for="zip">Zipcode</label>
-                            <input type="text" name="zipcode" id="zipcode">
-
-                            <label for="pay_meth" id="pay" class="head-label">Payment Method</label>    
-                            <div class="pay-meth">
-                                <div>
-                                <input type="radio" name="pay-meth" id="credit-card">
-                                <label for="card">Credit/Debit Card</label>
-                                </div>
-                                <div>
-                                <input type="radio" name="pay-meth" id="COD">
-                                <label for="cod">Cash On delivery</label>
-                                </div>
-                            </div>
-                        </div>
-                    </fieldset>
-
-                    <fieldset>
-                        <div class="subheading">Shipping Information</div>
-                        <div x-data="{open:false}" class="shipping set">
-                            <label for="rec-method" class="head-label">Method of Receiving</label>
-                            <div>
-                            <input type="radio" name="meth" id="pick" value="false">
-                            <label for="Pickup">Pick up from store</label>
-                            </div>
-                            <div>
-                            <input type="radio" name="meth" id="del" value="true" >
-                            <label for="Del">Delivery</label>
-                            </div>
-                            <label for="city" id="select">City: </label>
-                            <select name="city" id="city">
-                                <option value="Kandy"> Kandy <option>
-                                    <option value=" Matale"> Matale <option>
-                                    <option value=" Nuwara Eliy">  Nuwara Eliya<option>
-                                    <option value="Ampara "> Ampara<option>
-                                    <option value="Batticaloa"> Batticaloa <option>
-                                    <option value=" Trincomalee">  Trincomalee <option>
-                                    <option value="Anuradhapura"> Anuradhapura <option>
-                                    <option value=" Polonnaruwa">  Polonnaruwa <option>
-                                    <option value="Jaffna"> Jaffna <option>
-                                    <option value=" Kilinochchi">  Kilinochchi <option>
-                                    <option value=" Mannar">  Mannar <option>
-                                    <option value=" Mullaitivu">  Mullaitivu <option>
-                                    <option value=" Vavuniya">  Vavuniya <option>
-                                    <option value="Kurunegala"> Kurunegala <option>
-                                    <option value=" Puttalam">  Puttalam <option>
-                                    <option value="Kegalle"> Kegalle <option>
-                                    <option value=" Ratnapura">  Ratnapura <option>
-                                    <option value="Galle"> Galle <option>
-                                    <option value=" Hambantota">  Hambantota <option>
-                                    <option value=" Matara">  Matara <option>
-                                    <option value="Badulla"> Badulla <option>
-                                    <option value=" Monaragala">  Monaragala <option>
-                                    <option value="Colombo"> Colombo <option>
-                                    <option value=" Gampaha">  Gampaha <option>
-                                    <option value=" Kalutara">  Kalutara <option>
-                            </select>
-
-                        <div>
-                            <label for="Address" class="head-label"> Delivery Address</label>
-                            <div>
-                            <input type="radio" name="addy" id="same" value="false">
-                            <label for="same">Use Billing Address</label>
-                            </div>
-                            <div>
-                            <input type="radio" name="addy" id="diff" value="true">
-                            <label for="diff">Use different Address</label>
-                            </div>
-                            <div  id="del-addy">
-                            <label for="delivery-notes" >Delivery Address</label>
-                            <textarea name="delivery-notes" id="address" cols="50" rows="5"></textarea>
-                            </div>
-                        </div>
-                            <label for="sec-phone">Secondary phone number(optional)</label>
-                            <input type="tel" name="sec-phone" id="sec-phone">
-                        </div>
-                    </fieldset>
-
-                    <fieldset>
-                        <div class="subheading">Order Information</div>
-                        <div class="set">
-                            <label for="pr-type">Product Type</label>
-                            <select name="pr-type" id="pr-type">
-                                <option value="Produce">Produce</option>
-                                <option value="Dairy">Dairy</option>
-                                <option value="Makeup">Makeup</option>
-                            </select>
-                            <label for="pr-name">Product name</label>
-                            <input type="text" name="product-name" id="pr-name">
-                            <label for="pr-quan">Quantity</label>
-                            <input type="text" name="quan" id="quan">
-                            <input type="submit" id="submit" value="Add to cart">
-                        </div>
-                    </fieldset>
-                </form>
+    <h2>Dairy Products</h2>
+    <div id="elmCont" class="elmCont">
+        <div class="card">
+            <div class="img"><img src="./CSS/images/ProductImg/sheepmilk.jpg" alt="Milk" class="acImg"></div>
+            <div class="desc">
+            <div class="name">Milk</div>
+            <div class="price">200</div>
+            <div class="count"><input type="number" class="counter" min="1" aria-label="Quantity"></div>
+            <button class="btn" aria-label="Add to Cart"><svg xmlns="http://www.w3.org/2000/svg" height="25px" viewBox="0 -960 960 960" width="25px" fill="#FFFFFF"><path d="M263.79-96Q234-96 213-117.21t-21-51Q192-198 213.21-219t51-21Q294-240 315-218.79t21 51Q336-138 314.79-117t-51 21Zm432 0Q666-96 645-117.21t-21-51Q624-198 645.21-219t51-21Q726-240 747-218.79t21 51Q768-138 746.79-117t-51 21ZM253-696l83 192h301l82-192H253Zm-31-72h570q14 0 20.5 11t1.5 23L702.63-476.14Q694-456 676.5-444T637-432H317l-42 72h493v72H276q-43 0-63.5-36.15-20.5-36.16.5-71.85l52-90-131-306H48v-72h133l41 96Zm114 264h301-301Z"/></svg></button>
             </div>
+        </div>
+        
+        
+        <div class="card">
+            <div class="img"><img src="./CSS/images/ProductImg/yogurt_trad.webp" alt="Yogurt" class="acImg"></div>
+            <div class="desc">
+            <div class="name">Yogurt</div>
+            <div class="price">300</div>
+            <div class="count"><input type="number" class="counter" min="1" aria-label="Quantity"></div>
+            <button class="btn" aria-label="Add to Cart"><svg xmlns="http://www.w3.org/2000/svg" height="25px" viewBox="0 -960 960 960" width="25px" fill="#FFFFFF"><path d="M263.79-96Q234-96 213-117.21t-21-51Q192-198 213.21-219t51-21Q294-240 315-218.79t21 51Q336-138 314.79-117t-51 21Zm432 0Q666-96 645-117.21t-21-51Q624-198 645.21-219t51-21Q726-240 747-218.79t21 51Q768-138 746.79-117t-51 21ZM253-696l83 192h301l82-192H253Zm-31-72h570q14 0 20.5 11t1.5 23L702.63-476.14Q694-456 676.5-444T637-432H317l-42 72h493v72H276q-43 0-63.5-36.15-20.5-36.16.5-71.85l52-90-131-306H48v-72h133l41 96Zm114 264h301-301Z"/></svg></button>
             </div>
-            </section>
-        </article>
-    </main>
-    <footer>
-        <nav class="botnav">
-            <a href="#">Our Socials</a>
-            <a href="#">Get in contact</a>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
-        </nav>
-    </footer>
+        </div>
+        <div class="card">
+            <div class="img"><img src="./CSS/images/ProductImg/Blue_cheese.jpg" alt="Blue Cheese" class="acImg"></div>
+            <div class="desc">
+            <div class="name">Blue Cheese</div>
+            <div class="price">400</div>
+            <div class="count"><input type="number" class="counter" min="1" aria-label="Quantity"></div>
+            <button class="btn" aria-label="Add to Cart"><svg xmlns="http://www.w3.org/2000/svg" height="25px" viewBox="0 -960 960 960" width="25px" fill="#FFFFFF"><path d="M263.79-96Q234-96 213-117.21t-21-51Q192-198 213.21-219t51-21Q294-240 315-218.79t21 51Q336-138 314.79-117t-51 21Zm432 0Q666-96 645-117.21t-21-51Q624-198 645.21-219t51-21Q726-240 747-218.79t21 51Q768-138 746.79-117t-51 21ZM253-696l83 192h301l82-192H253Zm-31-72h570q14 0 20.5 11t1.5 23L702.63-476.14Q694-456 676.5-444T637-432H317l-42 72h493v72H276q-43 0-63.5-36.15-20.5-36.16.5-71.85l52-90-131-306H48v-72h133l41 96Zm114 264h301-301Z"/></svg></button>
+        </div>
+        </div>
+        <div class="card">
+            <div class="img"><img src="./CSS/images/ProductImg/chocomilk.webp" alt="chocolate milk" class="acImg"></div>
+            <div class="desc">
+            <div class="name">Chocalate Milk</div>
+            <div class="price">150</div>
+            <div class="count"><input type="number" class="counter" min="1" aria-label="Quantity"></div>
+            <button class="btn" aria-label="Add to Cart"><svg xmlns="http://www.w3.org/2000/svg" height="25px" viewBox="0 -960 960 960" width="25px" fill="#FFFFFF"><path d="M263.79-96Q234-96 213-117.21t-21-51Q192-198 213.21-219t51-21Q294-240 315-218.79t21 51Q336-138 314.79-117t-51 21Zm432 0Q666-96 645-117.21t-21-51Q624-198 645.21-219t51-21Q726-240 747-218.79t21 51Q768-138 746.79-117t-51 21ZM253-696l83 192h301l82-192H253Zm-31-72h570q14 0 20.5 11t1.5 23L702.63-476.14Q694-456 676.5-444T637-432H317l-42 72h493v72H276q-43 0-63.5-36.15-20.5-36.16.5-71.85l52-90-131-306H48v-72h133l41 96Zm114 264h301-301Z"/></svg></button>
+            </div>
+        </div>  
+        <div class="card">
+            <div class="img"><img src="./CSS/images/ProductImg/yogurt_blueberry.jpeg" alt="chocolate milk" class="acImg"></div>
+            <div class="desc">
+            <div class="name">Blue Berry Yogurt</div>
+            <div class="price">650</div>
+            <div class="count"><input type="number" class="counter" min="1" aria-label="Quantity"></div>
+            <button class="btn" aria-label="Add to Cart"><svg xmlns="http://www.w3.org/2000/svg" height="25px" viewBox="0 -960 960 960" width="25px" fill="#FFFFFF"><path d="M263.79-96Q234-96 213-117.21t-21-51Q192-198 213.21-219t51-21Q294-240 315-218.79t21 51Q336-138 314.79-117t-51 21Zm432 0Q666-96 645-117.21t-21-51Q624-198 645.21-219t51-21Q726-240 747-218.79t21 51Q768-138 746.79-117t-51 21ZM253-696l83 192h301l82-192H253Zm-31-72h570q14 0 20.5 11t1.5 23L702.63-476.14Q694-456 676.5-444T637-432H317l-42 72h493v72H276q-43 0-63.5-36.15-20.5-36.16.5-71.85l52-90-131-306H48v-72h133l41 96Zm114 264h301-301Z"/></svg></button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="img"><img src="./CSS/images/ProductImg/Mozz_cheese.jpg" alt="chocolate milk" class="acImg"></div>
+            <div class="desc">
+            <div class="name">Mozzarella</div>
+            <div class="price">350</div>
+            <div class="count"><input type="number" class="counter" min="1" aria-label="Quantity"></div>
+            <button class="btn" aria-label="Add to Cart"><svg xmlns="http://www.w3.org/2000/svg" height="25px" viewBox="0 -960 960 960" width="25px" fill="#FFFFFF"><path d="M263.79-96Q234-96 213-117.21t-21-51Q192-198 213.21-219t51-21Q294-240 315-218.79t21 51Q336-138 314.79-117t-51 21Zm432 0Q666-96 645-117.21t-21-51Q624-198 645.21-219t51-21Q726-240 747-218.79t21 51Q768-138 746.79-117t-51 21ZM253-696l83 192h301l82-192H253Zm-31-72h570q14 0 20.5 11t1.5 23L702.63-476.14Q694-456 676.5-444T637-432H317l-42 72h493v72H276q-43 0-63.5-36.15-20.5-36.16.5-71.85l52-90-131-306H48v-72h133l41 96Zm114 264h301-301Z"/></svg></button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="img"><img src="./CSS/images/ProductImg/paneer_cheese.jpg" class="acImg" alt="paneer"></div>
+            <div class="desc">
+            <div class="name">Paneer</div>
+            <div class="price">450</div>
+            <div class="count"><input type="number" class="counter" min="1" aria-label="Quantity"></div>
+            <button class="btn" aria-label="Add to Cart"><svg xmlns="http://www.w3.org/2000/svg" height="25px" viewBox="0 -960 960 960" width="25px" fill="#FFFFFF"><path d="M263.79-96Q234-96 213-117.21t-21-51Q192-198 213.21-219t51-21Q294-240 315-218.79t21 51Q336-138 314.79-117t-51 21Zm432 0Q666-96 645-117.21t-21-51Q624-198 645.21-219t51-21Q726-240 747-218.79t21 51Q768-138 746.79-117t-51 21ZM253-696l83 192h301l82-192H253Zm-31-72h570q14 0 20.5 11t1.5 23L702.63-476.14Q694-456 676.5-444T637-432H317l-42 72h493v72H276q-43 0-63.5-36.15-20.5-36.16.5-71.85l52-90-131-306H48v-72h133l41 96Zm114 264h301-301Z"/></svg></button>
+            </div>
+        </div>    
+        </div>
+    
+
+
+        <h2>Vegetables</h2>
+        <div class="elmCont">
+            <div class="card">
+                <div class="img"><img src="./CSS/images/ProductImg/Vegetables/bellpep.jpg" alt="Bell Pepper" class="acImg"></div>
+                <div class="desc">
+                    <div class="name">Bell Pepper</div>
+                    <div class="price">450</div>
+                    <div class="count"><input type="number" class="counter" min="1" aria-label="Quantity"></div>
+                    <button class="btn kg" aria-label="Add to cart"><svg xmlns="http://www.w3.org/2000/svg" class="kg" height="25px" viewBox="0 -960 960 960" width="25px" fill="#FFFFFF"><path d="M263.79-96Q234-96 213-117.21t-21-51Q192-198 213.21-219t51-21Q294-240 315-218.79t21 51Q336-138 314.79-117t-51 21Zm432 0Q666-96 645-117.21t-21-51Q624-198 645.21-219t51-21Q726-240 747-218.79t21 51Q768-138 746.79-117t-51 21ZM253-696l83 192h301l82-192H253Zm-31-72h570q14 0 20.5 11t1.5 23L702.63-476.14Q694-456 676.5-444T637-432H317l-42 72h493v72H276q-43 0-63.5-36.15-20.5-36.16.5-71.85l52-90-131-306H48v-72h133l41 96Zm114 264h301-301Z"/></svg></button>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="img"><img src="./CSS/images/ProductImg/Vegetables/broccoli.webp" alt="Broccoli" class="acImg"></div>
+                <div class="desc">
+                    <div class="name">Broccoli</div>
+                    <div class="price">300</div>
+                    <div class="count"><input type="number" class="counter" min="1" aria-label="Quantity"></div>
+                    <button class="btn kg" aria-label="Add to cart"><svg xmlns="http://www.w3.org/2000/svg" class="kg" height="25px" viewBox="0 -960 960 960" width="25px" fill="#FFFFFF"><path d="M263.79-96Q234-96 213-117.21t-21-51Q192-198 213.21-219t51-21Q294-240 315-218.79t21 51Q336-138 314.79-117t-51 21Zm432 0Q666-96 645-117.21t-21-51Q624-198 645.21-219t51-21Q726-240 747-218.79t21 51Q768-138 746.79-117t-51 21ZM253-696l83 192h301l82-192H253Zm-31-72h570q14 0 20.5 11t1.5 23L702.63-476.14Q694-456 676.5-444T637-432H317l-42 72h493v72H276q-43 0-63.5-36.15-20.5-36.16.5-71.85l52-90-131-306H48v-72h133l41 96Zm114 264h301-301Z"/></svg></button>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="img"><img src="./CSS/images/ProductImg/Vegetables/cabbage.jpg" alt="Cabbage" class="acImg"></div>
+                <div class="desc">
+                    <div class="name">Cabbage</div>
+                    <div class="price">600</div>
+                    <div class="count"><input type="number" class="counter" min="1" aria-label="Quantity"></div>
+                    <button class="btn kg" aria-label="Add to cart"><svg xmlns="http://www.w3.org/2000/svg" class="kg" height="25px" viewBox="0 -960 960 960" width="25px" fill="#FFFFFF"><path d="M263.79-96Q234-96 213-117.21t-21-51Q192-198 213.21-219t51-21Q294-240 315-218.79t21 51Q336-138 314.79-117t-51 21Zm432 0Q666-96 645-117.21t-21-51Q624-198 645.21-219t51-21Q726-240 747-218.79t21 51Q768-138 746.79-117t-51 21ZM253-696l83 192h301l82-192H253Zm-31-72h570q14 0 20.5 11t1.5 23L702.63-476.14Q694-456 676.5-444T637-432H317l-42 72h493v72H276q-43 0-63.5-36.15-20.5-36.16.5-71.85l52-90-131-306H48v-72h133l41 96Zm114 264h301-301Z"/></svg></button>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="img"><img src="./CSS/images/ProductImg/Vegetables/carrot.webp" alt="Carrot" class="acImg"></div>
+                <div class="desc">
+                    <div class="name">Carrot</div>
+                    <div class="price">300</div>
+                    <div class="count"><input type="number" class="counter" min="1" aria-label="Quantity"></div>
+                    <button class="btn kg" aria-label="Add to cart"><svg xmlns="http://www.w3.org/2000/svg" class="kg" height="25px" viewBox="0 -960 960 960" width="25px" fill="#FFFFFF"><path d="M263.79-96Q234-96 213-117.21t-21-51Q192-198 213.21-219t51-21Q294-240 315-218.79t21 51Q336-138 314.79-117t-51 21Zm432 0Q666-96 645-117.21t-21-51Q624-198 645.21-219t51-21Q726-240 747-218.79t21 51Q768-138 746.79-117t-51 21ZM253-696l83 192h301l82-192H253Zm-31-72h570q14 0 20.5 11t1.5 23L702.63-476.14Q694-456 676.5-444T637-432H317l-42 72h493v72H276q-43 0-63.5-36.15-20.5-36.16.5-71.85l52-90-131-306H48v-72h133l41 96Zm114 264h301-301Z"/></svg></button>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="img"><img src="./CSS/images/ProductImg/Vegetables/leeks.jpeg" alt="Leeks" class="acImg"></div>
+                <div class="desc">
+                    <div class="name">Leeks</div>
+                    <div class="price">250</div>
+                    <div class="count"><input type="number" class="counter" min="1" aria-label="Quantity"></div>
+                    <button class="btn kg" aria-label="Add to cart"><svg xmlns="http://www.w3.org/2000/svg" class="kg" height="25px" viewBox="0 -960 960 960" width="25px" fill="#FFFFFF"><path d="M263.79-96Q234-96 213-117.21t-21-51Q192-198 213.21-219t51-21Q294-240 315-218.79t21 51Q336-138 314.79-117t-51 21Zm432 0Q666-96 645-117.21t-21-51Q624-198 645.21-219t51-21Q726-240 747-218.79t21 51Q768-138 746.79-117t-51 21ZM253-696l83 192h301l82-192H253Zm-31-72h570q14 0 20.5 11t1.5 23L702.63-476.14Q694-456 676.5-444T637-432H317l-42 72h493v72H276q-43 0-63.5-36.15-20.5-36.16.5-71.85l52-90-131-306H48v-72h133l 41 96Zm114 264h301-301Z"/></svg></button>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="img"><img src="./CSS/images/ProductImg/Vegetables/mushroom.jpg" alt="Mushroom" class="acImg"></div>
+                <div class="desc">
+                    <div class="name">Mushroom</div>
+                    <div class="price">600</div>
+                    <div class="count"><input type="number" class="counter" min="1" aria-label="Quantity"></div>
+                    <button class="btn kg" aria-label="Add to cart"><svg xmlns="http://www.w3.org/2000/svg" class="kg" height="25px" viewBox="0 -960 960 960" width="25px" fill="#FFFFFF"><path d="M263.79-96Q234-96 213-117.21t-21-51Q192-198 213.21-219t51-21Q294-240 315-218.79t21 51Q336-138 314.79-117t-51 21Zm432 0Q666-96 645-117.21t-21-51Q624-198 645.21-219t51-21Q726-240 747-218.79t21 51Q768-138 746.79-117t-51 21ZM253-696l83 192h301l82-192H253Zm-31-72h570q14 0 20.5 11t1.5 23L702.63-476.14Q694-456 676.5-444T637-432H317l-42 72h493v72H276q-43 0-63.5-36.15-20.5-36.16.5-71.85l52-90-131-306H48v-72h133l41 96Zm114 264h301-301Z"/></svg></button>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="img"><img src="./CSS/images/ProductImg/Vegetables/redonion.jpg" alt="Red Onion" class="acImg"></div>
+                <div class="desc">
+                    <div class="name">Red Onion</div>
+                    <div class="price">300</div>
+                    <div class="count"><input type="number" class="counter" min="1" aria-label="Quantity"></div>
+                    <button class="btn kg" aria-label="Add to cart"><svg xmlns="http://www.w3.org/2000/svg" class="kg" height="25px" viewBox="0 -960 960 960" width="25px" fill="#FFFFFF"><path d="M263.79-96Q234-96 213-117.21t-21-51Q192-198 213.21-219t51-21Q294-240 315-218.79t21 51Q336-138 314.79-117t-51 21Zm432 0Q666-96 645-117.21t-21-51Q624-198 645.21-219t51-21Q726-240 747-218.79t21 51Q768-138 746.79-117t-51 21ZM253-696l83 192h301l82-192H253Zm-31-72h570q14 0 20.5 11t1.5 23L702.63-476.14Q694-456 676.5-444T637-432H317l-42 72h493v72H276q-43 0-63.5-36.15-20.5-36.16.5-71.85l52-90-131-306H48v-72h133l41 96Zm114 264h301-301Z"/></svg></button>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="img"><img src="./CSS/images/ProductImg/Vegetables/tomato.jpg" alt="Tomato" class="acImg"></div>
+                <div class="desc">
+                    <div class="name">Tomato</div>
+                    <div class="price">250</div>
+                    <div class="count"><input type="number" class="counter" min="1" aria-label="Quantity"></div>
+                    <button class="btn kg" aria-label="Add to cart"><svg xmlns="http://www.w3.org/2000/svg" class="kg" height="25px" viewBox="0 -960 960 960" width="25px" fill="#FFFFFF"><path d="M263.79-96Q234-96 213-117.21t-21-51Q192-198 213.21-219t51-21Q294-240 315-218.79t21 51Q336-138 314.79-117t-51 21Zm432 0Q666-96 645-117.21t-21-51Q624-198 645.21-219t51-21Q726-240 747-218.79t21 51Q768-138 746.79-117t-51 21ZM253-696l83 192h301l82-192H253Zm-31-72h570q14 0 20.5 11t1.5 23L702.63-476.14Q694-456 676.5-444T637-432H317l-42 72h493v72H276q-43 0-63.5-36.15-20.5-36.16.5-71.85l52-90-131-306H48v-72h133l41 96Zm114 264h301-301Z"/></svg></button>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="img"><img src="./CSS/images/ProductImg/Vegetables/zuchh.jpg" alt="Zucchini" class="acImg"></div>
+                <div class="desc">
+                    <div class="name">Zucchini</div>
+                    <div class="price">300</div>
+                    <div class="count"><input type="number" class="counter" min="1" aria-label="Quantity"></div>
+                    <button class="btn kg" aria-label="Add to cart"><svg xmlns="http://www.w3.org/2000/svg" class="kg" height="25px" viewBox="0 -960 960 960" width="25px" fill="#FFFFFF"><path d="M263.79-96Q234-96 213-117.21t-21-51Q192-198 213.21-219t51-21Q294-240 315-218.79t21 51Q336-138 314.79-117t-51 21Zm432 0Q666-96 645-117.21t-21-51Q624-198 645.21-219t51-21Q726-240 747-218.79t21 51Q768-138 746.79-117t-51 21ZM253-696l83 192h301l82-192H253Zm-31-72h570q14 0 20.5 11t1.5 23L702.63-476.14Q694-456 676.5-444T637-432H317l-42 72h493v72H276q-43 0-63.5-36.15-20.5-36.16.5-71.85l52-90-131-306H48v-72h133l41 96Zm114 264h301-301Z"/></svg></button>
+                </div>
+            </div>
+        </div>
+
+        <h2>Fruit</h2>
+        <div class="elmCont">
+            <div class="card">
+                <div class="img"><img src="./CSS/images/ProductImg/Fruit/Banana.webp" alt="Banana" class="acImg"></div>
+                <div class="desc">
+                    <div class="name">Banana</div>
+                    <div class="price">300</div>
+                    <div class="count"><input type="number" class="counter" min="1" aria-label="Quantity"></div>
+                    <button class="btn kg" aria-label="Add to cart"><svg xmlns="http://www.w3.org/2000/svg" class="kg" height="25px" viewBox="0 -960 960 960" width="25px" fill="#FFFFFF"><path d="M263.79-96Q234-96 213-117.21t-21-51Q192-198 213.21-219t51-21Q294-240 315-218.79t21 51Q336-138 314.79-117t-51 21Zm432 0Q666-96 645-117.21t-21-51Q624-198 645.21-219t51-21Q726-240 747-218.79t21 51Q768-138 746.79-117t-51 21ZM253-696l83 192h301l82-192H253Zm-31-72h570q14 0 20.5 11t1.5 23L702.63-476.14Q694-456 676.5-444T637-432H317l-42 72h493v72H276q-43 0-63.5-36.15-20.5-36.16.5-71.85l52-90-131-306H48v-72h133l41 96Zm114 264h301-301Z"/></svg></button>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="img"><img src="./CSS/images/ProductImg/Fruit/DragFruit.jpg" alt="Dragon Fruit" class="acImg"></div>
+                <div class="desc">
+                    <div class="name">Dragon Fruit</div>
+                    <div class="price">280</div>
+                    <div class="count"><input type="number" class="counter" min="1" aria-label="Quantity"></div>
+                    <button class="btn kg" aria-label="Add to cart"><svg xmlns="http://www.w3.org/2000/svg" class="kg" height="25px" viewBox="0 -960 960 960" width="25px" fill="#FFFFFF"><path d="M263.79-96Q234-96 213-117.21t-21-51Q192-198 213.21-219t51-21Q294-240 315-218.79t21 51Q336-138 314.79-117t-51 21Zm432 0Q666-96 645-117.21t-21-51Q624-198 645.21-219t51-21Q726-240 747-218.79t21 51Q768-138 746.79-117t-51 21ZM253-696l83 192h301l82-192H253Zm-31-72h570q14 0 20.5 11t1.5 23L702.63-476.14Q694-456 676.5-444T637-432H317l-42 72h493v72H276q-43 0-63.5-36.15-20.5-36.16.5-71.85l52-90-131-306H48v-72h133l41 96Zm114 264h301-301Z"/></svg></button>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="img"><img src="./CSS/images/ProductImg/Fruit/blueberries.webp" alt="Blueberries" class="acImg"></div>
+                <div class="desc">
+                    <div class="name">Blueberries</div>
+                    <div class="price">400</div>
+                    <div class="count"><input type="number" class="counter" min="1" aria-label="Quantity"></div>
+                    <button class="btn kg" aria-label="Add to cart"><svg xmlns="http://www.w3.org/2000/svg" class="kg" height="25px" viewBox="0 -960 960 960" width="25px" fill="#FFFFFF"><path d="M263.79-96Q234-96 213-117.21t-21-51Q192-198 213.21-219t51-21Q294-240 315-218.79t21 51Q336-138 314.79-117t-51 21Zm432 0Q666-96 645-117.21t-21-51Q624-198 645.21-219t51-21Q726-240 747-218.79t21 51Q768-138 746.79-117t-51 21ZM253-696l83 192h301l82-192H253Zm-31-72h570q14 0 20.5 11t1.5 23L702.63-476.14Q694-456 676.5-444T637-432H317l-42 72h493v72H276q-43 0-63.5-36.15-20.5-36.16.5-71.85l52-90-131-306H48v-72h133l41 96Zm114 264h301-301Z"/></svg></button>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="img"><img src="./CSS/images/ProductImg/Fruit/mango.webp" alt="Mango" class="acImg"></div>
+                <div class="desc">
+                    <div class="name">Mango</div>
+                    <div class="price">400</div>
+                    <div class="count"><input type="number" class="counter" min="1" aria-label="Quantity"></div>
+                    <button class="btn kg" aria-label="Add to cart"><svg xmlns="http://www.w3.org/2000/svg" class="kg" height="25px" viewBox="0 -960 960 960" width="25px" fill="#FFFFFF"><path d="M263.79-96Q234-96 213-117.21t-21-51Q192-198 213.21-219t51-21Q294-240 315-218.79t21 51Q336-138 314.79-117t-51 21Zm432 0Q666-96 645-117.21t-21-51Q624-198 645.21-219t51-21Q726-240 747-218.79t21 51Q768-138 746.79-117t-51 21ZM253-696l83 192h301l82-192H253Zm-31-72h570q14 0 20.5 11t1.5 23L702.63-476.14Q694-456 676.5-444T637-432H317l-42 72h493v72H276q-43 0-63.5-36.15-20.5-36.16.5-71.85l52-90-131-306H48v-72h133l41 96Zm114 264h301-301Z"/></svg></button>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="img"><img src="./CSS/images/ProductImg/Fruit/pears.webp" alt="Pears" class="acImg"></div>
+                <div class="desc">
+                    <div class="name">Pears</div>
+                    <div class="price">300</div>
+                    <div class="count"><input type="number" class="counter" min="1" aria-label="Quantity"></div>
+                    <button class="btn kg" aria-label="Add to cart"><svg xmlns="http://www.w3.org/2000/svg" class="kg" height="25px" viewBox="0 -960 960 960" width="25px" fill="#FFFFFF"><path d="M263.79-96Q234-96 213-117.21t-21-51Q192-198 213.21-219t51-21Q294-240 315-218.79t21 51Q336-138 314.79-117t-51 21Zm432 0Q666-96 645-117.21t-21-51Q624-198 645.21-219t51-21Q726-240 747-218.79t21 51Q768-138 746.79-117t-51 21ZM253-696l83 192h301l82-192H253Zm-31-72h570q14 0 20.5 11t1.5 23L702.63-476.14Q694-456 676.5-444T637-432H317l-42 72h493v72H276q-43 0-63.5-36.15-20.5-36.16.5-71.85l52-90-131-306H48v-72h133l41 96Zm114 264h301-301Z"/></svg></button>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="img"><img src="./CSS/images/ProductImg/Fruit/pineapple.jpeg" alt="Pineapple" class="acImg"></div>
+                <div class="desc">
+                    <div class="name">Pineapple</div>
+                    <div class="price">600</div>
+                    <div class="count"><input type="number" class="counter" min="1" aria-label="Quantity"></div>
+                    <button class="btn kg" aria-label="Add to cart"><svg xmlns="http://www.w3.org/2000/svg" class="kg" height="25px" viewBox="0 -960 960 960" width="25px" fill="#FFFFFF"><path d="M263.79-96Q234-96 213-117.21t-21-51Q192-198 213.21-219t51-21Q294-240 315-218.79t21 51Q336-138 314.79-117t-51 21Zm432 0Q666-96 645-117.21t-21-51Q624-198 645.21-219t51-21Q726-240 747-218.79t21 51Q768-138 746.79-117t-51 21ZM253-696l83 192h301l82-192H253Zm-31-72h570q14 0 20.5 11t1.5 23L702.63-476.14Q694-456 676.5-444T637-432H317l-42 72h493v72H276q-43 0-63.5-36.15-20.5-36.16.5-71.85l52-90-131-306H48v-72h133l41 96Zm114 264h301-301Z"/></svg></button>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="img"><img src="./CSS/images/ProductImg/Fruit/pom.jpeg" alt="Pomegranate" class="acImg"></div>
+                <div class="desc">
+                    <div class="name">Pomegranate</div>
+                    <div class="price">200</div>
+                    <div class="count"><input type="number" class="counter" min="1" aria-label="Quantity"></div>
+                    <button class="btn kg" aria-label="Add to cart"><svg xmlns="http://www.w3.org/2000/svg" class="kg" height="25px" viewBox="0 -960 960 960" width="25px" fill="#FFFFFF"><path d="M263.79-96Q234-96 213-117.21t-21-51Q192-198 213.21-219t51-21Q294-240 315-218.79t21 51Q336-138 314.79-117t-51 21Zm432 0Q666-96 645-117.21t-21-51Q624-198 645.21-219t51-21Q726-240 747-218.79t21 51Q768-138 746.79-117t-51 21ZM253-696l83 192h301l82-192H253Zm-31-72h570q14 0 20.5 11t1.5 23L702.63-476.14Q694-456 676.5-444T637-432H317l-42 72h493v72H276q-43 0-63.5-36.15-20.5-36.16.5-71.85l52-90-131-306H48v-72h133l41 96Zm114 264h301-301Z"/></svg></button>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="img"><img src="./CSS/images/ProductImg/Fruit/straberries.jpg" alt="Strawberries" class="acImg"></div>
+                <div class="desc">
+                    <div class="name">Strawberries</div>
+                    <div class="price">350</div>
+                    <div class="count"><input type="number" class="counter" min="1" aria-label="Quantity"></div>
+                    <button class="btn kg" aria-label="Add to cart"><svg xmlns="http://www.w3.org/2000/svg" class="kg" height="25px" viewBox="0 -960 960 960" width="25px" fill="#FFFFFF"><path d="M263.79-96Q234-96 213-117.21t-21-51Q192-198 213.21-219t51-21Q294-240 315-218.79t21 51Q336-138 314.79-117t-51 21Zm432 0Q666-96 645-117.21t-21-51Q624-198 645.21-219t51-21Q726-240 747-218.79t21 51Q768-138 746.79-117t-51 21ZM253-696l83 192h301l82-192H253Zm-31-72h570q14 0 20.5 11t1.5 23L702.63-476.14Q694-456 676.5-444T637-432H317l-42 72h493v72H276q-43 0-63.5-36.15-20.5-36.16.5-71.85l52-90-131-306H48v-72h133l41 96Zm114 264h301-301Z"/></svg></button>
+                </div>
+            </div>            
+        </div>
+
+        <h2>Meat & Sea Food</h2>
+        <div class="elmCont">
+            <div class="card">
+                <div class="img"><img src="./CSS/images/ProductImg/meatnsea/beef.png" alt="Beef" class="acImg"></div>
+                <div class="desc">
+                    <div class="name">Beef</div>
+                    <div class="price">2400</div>
+                    <div class="count"><input type="number" class="counter" min="1" aria-label="Quantity"></div>
+                    <button class="btn kg" aria-label="Add to cart"><svg xmlns="http://www.w3.org/2000/svg" class="kg" height="25px" viewBox="0 -960 960 960" width="25px" fill="#FFFFFF"><path d="M263.79-96Q234-96 213-117.21t-21-51Q192-198 213.21-219t51-21Q294-240 315-218.79t21 51Q336-138 314.79-117t-51 21Zm432 0Q666-96 645-117.21t-21-51Q624-198 645.21-219t51-21Q726-240 747-218.79t21 51Q768-138 746.79-117t-51 21ZM253-696l83 192h301l82-192H253Zm-31-72h570q14 0 20.5 11t1.5 23L702.63-476.14Q694-456 676.5-444T637-432H317l-42 72h493v72H276q-43 0-63.5-36.15-20.5-36.16.5-71.85l52-90-131-306H48v-72h133l41 96Zm114 264h301-301Z"/></svg></button>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="img"><img src="./CSS/images/ProductImg/meatnsea/chicken.png" alt="Chicken" class="acImg"></div>
+                <div class="desc">
+                    <div class="name">Chicken</div>
+                    <div class="price">1600</div>
+                    <div class="count"><input type="number" class="counter" min="1" aria-label="Quantity"></div>
+                    <button class="btn kg" aria-label="Add to cart"><svg xmlns="http://www.w3.org/2000/svg" class="kg" height="25px" viewBox="0 -960 960 960" width="25px" fill="#FFFFFF"><path d="M263.79-96Q234-96 213-117.21t-21-51Q192-198 213.21-219t51-21Q294-240 315-218.79t21 51Q336-138 314.79-117t-51 21Zm432 0Q666-96 645-117.21t-21-51Q624-198 645.21-219t51-21Q726-240 747-218.79t21 51Q768-138 746.79-117t-51 21ZM253-696l83 192h301l82-192H253Zm-31-72h570q14 0 20.5 11t1.5 23L702.63-476.14Q694-456 676.5-444T637-432H317l-42 72h493v72H276q-43 0-63.5-36.15-20.5-36.16.5-71.85l52-90-131-306H48v-72h133l41 96Zm114 264h301-301Z"/></svg></button>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="img"><img src="./CSS/images/ProductImg/meatnsea/mutton.png" alt="Mutton" class="acImg"></div>
+                <div class="desc">
+                    <div class="name">Mutton</div>
+                    <div class="price">3000</div>
+                    <div class="count"><input type="number" class="counter" min="1" aria-label="Quantity"></div>
+                    <button class="btn kg" aria-label="Add to cart"><svg xmlns="http://www.w3.org/2000/svg" class="kg" height="25px" viewBox="0 -960 960 960" width="25px" fill="#FFFFFF"><path d="M263.79-96Q234-96 213-117.21t-21-51Q192-198 213.21-219t51-21Q294-240 315-218.79t21 51Q336-138 314.79-117t-51 21Zm432 0Q666-96 645-117.21t-21-51Q624-198 645.21-219t51-21Q726-240 747-218.79t21 51Q768-138 746.79-117t-51 21ZM253-696l83 192h301l82-192H253Zm-31-72h570q14 0 20.5 11t1.5 23L702.63-476.14Q694-456 676.5-444T637-432H317l-42 72h493v72H276q-43 0-63.5-36.15-20.5-36.16.5-71.85l52-90-131-306H48v-72h133l41 96Zm114 264h301-301Z"/></svg></button>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="img"><img src="./CSS/images/ProductImg/meatnsea/pork.jpg" alt="Pork" class="acImg"></div>
+                <div class="desc">
+                    <div class="name">Pork</div>
+                    <div class="price">1500</div>
+                    <div class="count"><input type="number" class="counter" min="1" aria-label="Quantity"></div>
+                    <button class="btn kg" aria-label="Add to cart"><svg xmlns="http://www.w3.org/2000/svg" class="kg" height="25px" viewBox="0 -960 960 960" width="25px" fill="#FFFFFF"><path d="M263.79-96Q234-96 213-117.21t-21-51Q192-198 213.21-219t51-21Q294-240 315-218.79t21 51Q336-138 314.79-117t-51 21Zm432 0Q666-96 645-117.21t-21-51Q624-198 645.21-219t51-21Q726-240 747-218.79t21 51Q768-138 746.79-117t-51 21ZM253-696l83 192h301l82-192H253Zm-31-72h570q14 0 20.5 11t1.5 23L702.63-476.14Q694-456 676.5-444T637-432H317l-42 72h493v72H276q-43 0-63.5-36.15-20.5-36.16.5-71.85l52-90-131-306H48v-72h133l41 96Zm114 264h301-301Z"/></svg></button>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="img"><img src="./CSS/images/ProductImg/meatnsea/tuna.png" alt="Tuna" class="acImg"></div>
+                <div class="desc">
+                    <div class="name">Tuna</div>
+                    <div class="price">4400</div>
+                    <div class="count"><input type="number" class="counter" min="1" aria-label="Quantity"></div>
+                    <button class="btn kg" aria-label="Add to cart"><svg xmlns="http://www.w3.org/2000/svg" class="kg" height="25px" viewBox="0 -960 960 960" width="25px" fill="#FFFFFF"><path d="M263.79-96Q234-96 213-117.21t-21-51Q192-198 213.21-219t51-21Q294-240 315-218.79t21 51Q336-138 314.79-117t-51 21Zm432 0Q666-96 645-117.21t-21-51Q624-198 645.21-219t51-21Q726-240 747-218.79t21 51Q768-138 746.79-117t-51 21ZM253-696l83 192h301l82-192H253Zm-31-72h570q14 0 20.5 11t1.5 23L702.63-476.14Q694-456 676.5-444T637-432H317l-42 72h493v72H276q-43 0-63.5-36.15-20.5-36.16.5-71.85l52-90-131-306H48v-72h133l41 96Zm114 264h301-301Z"/></svg></button>
+                </div>
+            </div>
+        </div>
+
+
+
+    <h2>Baking & Cooking Ingredients</h2>
+    <div class="elmCont">
+        <div class="card">
+            <div class="img"><img src="./CSS/images/ProductImg/Baking/bakingpowder.jpg" alt="Baking Powder" class="acImg"></div>
+            <div class="desc">
+                <div class="name">Baking Powder</div>
+                <div class="price">200</div>
+                <div class="count"><input type="number" class="counter" min="1" aria-label="Quantity"></div>
+                <button class="btn" aria-label="Add to Cart"><svg xmlns="http://www.w3.org/2000/svg" height="25px" viewBox="0 -960 960 960" width="25px" fill="#FFFFFF"><path d="M263.79-96Q234-96 213-117.21t-21-51Q192-198 213.21-219t51-21Q294-240 315-218.79t21 51Q336-138 314.79-117t-51 21Zm432 0Q666-96 645-117.21t-21-51Q624-198 645.21-219t51-21Q726-240 747-218.79t21 51Q768-138 746.79-117t-51 21ZM253-696l83 192h301l82-192H253Zm-31-72h570q14 0 20.5 11t1.5 23L702.63-476.14Q694-456 676.5-444T637-432H317l-42 72h493v72H276q-43 0-63.5-36.15-20.5-36.16.5-71.85l52-90-131-306H48v-72h133l41 96Zm114 264h301-301Z"/></svg></button>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="img"><img src="./CSS/images/ProductImg/Baking/chilli.jpg" alt="Chilli" class="acImg"></div>
+            <div class="desc">
+                <div class="name">Chilli</div>
+                <div class="price">200</div>
+                <div class="count"><input type="number" class="counter" min="1" aria-label="Quantity"></div>
+                <button class="btn" aria-label="Add to Cart"><svg xmlns="http://www.w3.org/2000/svg" height="25px" viewBox="0 -960 960 960" width="25px" fill="#FFFFFF"><path d="M263.79-96Q234-96 213-117.21t-21-51Q192-198 213.21-219t51-21Q294-240 315-218.79t21 51Q336-138 314.79-117t-51 21Zm432 0Q666-96 645-117.21t-21-51Q624-198 645.21-219t51-21Q726-240 747-218.79t21 51Q768-138 746.79-117t-51 21ZM253-696l83 192h301l82-192H253Zm-31-72h570q14 0 20.5 11t1.5 23L702.63-476.14Q694-456 676.5-444T637-432H317l-42 72h493v72H276q-43 0-63.5-36.15-20.5-36.16.5-71.85l52-90-131-306H48v-72h133l41 96Zm114 264h301-301Z"/></svg></button>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="img"><img src="./CSS/images/ProductImg/Baking/cinnamon.webp" alt="Cinnamon" class="acImg"></div>
+            <div class="desc">
+                <div class="name">Cinnamon</div>
+                <div class="price">200</div>
+                <div class="count"><input type="number" class="counter" min="1" aria-label="Quantity"></div>
+                <button class="btn" aria-label="Add to Cart"><svg xmlns="http://www.w3.org/2000/svg" height="25px" viewBox="0 -960 960 960" width="25px" fill="#FFFFFF"><path d="M263.79-96Q234-96 213-117.21t-21-51Q192-198 213.21-219t51-21Q294-240 315-218.79t21 51Q336-138 314.79-117t-51 21Zm432 0Q666-96 645-117.21t-21-51Q624-198 645.21-219t51-21Q726-240 747-218.79t21 51Q768-138 746.79-117t-51 21ZM253-696l83 192h301l82-192H253Zm-31-72h570q14 0 20.5 11t1.5 23L702.63-476.14Q694-456 676.5-444T637-432H317l-42 72h493v72H276q-43 0-63.5-36.15-20.5-36.16.5-71.85l52-90-131-306H48v-72h133l41 96Zm114 264h301-301Z"/></svg></button>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="img"><img src="./CSS/images/ProductImg/Baking/fivespice.webp" alt="Five Spice" class="acImg"></div>
+            <div class="desc">
+                <div class="name">Five Spice</div>
+                <div class="price">200</div>
+                <div class="count"><input type="number" class="counter" min="1" aria-label="Quantity"></div>
+                <button class="btn" aria-label="Add to Cart"><svg xmlns="http://www.w3.org/2000/svg" height="25px" viewBox="0 -960 960 960" width="25px" fill="#FFFFFF"><path d="M263.79-96Q234-96 213-117.21t-21-51Q192-198 213.21-219t51-21Q294-240 315-218.79t21 51Q336-138 314.79-117t-51 21Zm432 0Q666-96 645-117.21t-21-51Q624-198 645.21-219t51-21Q726-240 747-218.79t21 51Q768-138 746.79-117t-51 21ZM253-696l83 192h301l82-192H253Zm-31-72h570q14 0 20.5 11t1.5 23L702.63-476.14Q694-456 676.5-444T637-432H317l-42 72h493v72H276q-43 0-63.5-36.15-20.5-36.16.5-71.85l52-90-131-306H48v-72h133l41 96Zm114 264h301-301Z"/></svg></button>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="img"><img src="./CSS/images/ProductImg/Baking/flour.webp" alt="Flour" class="acImg"></div>
+            <div class="desc">
+                <div class="name">Flour</div>
+                <div class="price">200</div>
+                <div class="count"><input type="number" class="counter" min="1" aria-label="Quantity"></div>
+                <button class="btn" aria-label="Add to Cart"><svg xmlns="http://www.w3.org/2000/svg" height="25px" viewBox="0 -960 960 960" width="25px" fill="#FFFFFF"><path d="M263.79-96Q234-96 213-117.21t-21-51Q192-198 213.21-219t51-21Q294-240 315-218.79t21 51Q336-138 314.79-117t-51 21Zm432 0Q666-96 645-117.21t-21-51Q624-198 645.21-219t51-21Q726-240 747-218.79t21 51Q768-138 746.79-117t-51 21ZM253-696l83 192h301l82-192H253Zm-31-72h570q14 0 20.5 11t1.5 23L702.63-476.14Q694-456 676.5-444T637-432H317l-42 72h493v72H276q-43 0-63.5-36.15-20.5-36.16.5-71.85l52-90-131-306H48v-72h133l41 96Zm114 264h301-301Z"/></svg></button>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="img"><img src="./CSS/images/ProductImg/Baking/icingsuga.jpg" alt="Icing Sugar" class="acImg"></div>
+            <div class="desc">
+                <div class="name">Icing Sugar</div>
+                <div class="price">200</div>
+                <div class="count"><input type="number" class="counter" min="1" aria-label="Quantity"></div>
+                <button class="btn" aria-label="Add to Cart"><svg xmlns="http://www.w3.org/2000/svg" height="25px" viewBox="0 -960 960 960" width="25px" fill="#FFFFFF"><path d="M263.79-96Q234-96 213-117.21t-21-51Q192-198 213.21-219t51-21Q294-240 315-218.79t21 51Q336-138 314.79-117t-51 21Zm432 0Q666-96 645-117.21t-21-51Q624-198 645.21-219t51-21Q726-240 747-218.79t21 51Q768-138 746.79-117t-51 21ZM253-696l83 192h301l82-192H253Zm-31-72h570q14 0 20.5 11t1.5 23L702.63-476.14Q694-456 676.5-444T637-432H317l-42 72h493v72H276q-43 0-63.5-36.15-20.5-36.16.5-71.85l52-90-131-306H48v-72h133l41 96Zm114 264h301-301Z"/></svg></button>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="img"><img src="./CSS/images/ProductImg/Baking/oregano.webp" alt="Oregano" class="acImg"></div>
+            <div class="desc">
+                <div class="name">Oregano</div>
+                <div class="price">200</div>
+                <div class="count"><input type="number" class="counter" min="1" aria-label="Quantity"></div>
+                <button class="btn" aria-label="Add to Cart"><svg xmlns="http://www.w3.org/2000/svg" height="25px" viewBox="0 -960 960 960" width="25px" fill="#FFFFFF"><path d="M263.79-96Q234-96 213-117.21t-21-51Q192-198 213.21-219t51-21Q294-240 315-218.79t21 51Q336-138 314.79-117t-51 21Zm432 0Q666-96 645-117.21t-21-51Q624-198 645.21-219t51-21Q726-240 747-218.79t21 51Q768-138 746.79-117t-51 21ZM253-696l83 192h301l82-192H253Zm-31-72h570q14 0 20.5 11t1.5 23L702.63-476.14Q694-456 676.5-444T637-432H317l-42 72h493v72H276q-43 0-63.5-36.15-20.5-36.16.5-71.85l52-90-131-306H48v-72h133l41 96Zm114 264h301-301Z"/></svg></button>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="img"><img src="./CSS/images/ProductImg/Baking/roseimage.webp" alt="Rose Water" class="acImg"></div>
+            <div class="desc">
+                <div class="name">Rose Water</div>
+                <div class="price">200</div>
+                <div class="count"><input type="number" class="counter" min="1" aria-label="Quantity"></div>
+                <button class="btn" aria-label="Add to Cart"><svg xmlns="http://www.w3.org/2000/svg" height="25px" viewBox="0 -960 960 960" width="25px" fill="#FFFFFF"><path d="M263.79-96Q234-96 213-117.21t-21-51Q192-198 213.21-219t51-21Q294-240 315-218.79t21 51Q336-138 314.79-117t-51 21Zm432 0Q666-96 645-117.21t-21-51Q624-198 645.21-219t51-21Q726-240 747-218.79t21 51Q768-138 746.79-117t-51 21ZM253-696l83 192h301l82-192H253Zm-31-72h570q14 0 20.5 11t1.5 23L702.63-476.14Q694-456 676.5-444T637-432H317l-42 72h493v72H276q-43 0-63.5-36.15-20.5-36.16.5-71.85l52-90-131-306H48v-72h133l41 96Zm114 264h301-301Z"/></svg></button>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="img"><img src="./CSS/images/ProductImg/Baking/vaniessence.jpg" alt="Vanilla Essence" class="acImg"></div>
+            <div class="desc">
+                <div class="name">Vanilla Essence</div>
+                <div class="price">200</div>
+                <div class="count"><input type="number" class="counter" min="1" aria-label="Quantity"></div>
+                <button class="btn" aria-label="Add to Cart"><svg xmlns="http://www.w3.org/2000/svg" height="25px" viewBox="0 -960 960 960" width="25px" fill="#FFFFFF"><path d="M263.79-96Q234-96 213-117.21t-21-51Q192-198 213.21-219t51-21Q294-240 315-218.79t21 51Q336-138 314.79-117t-51 21Zm432 0Q666-96 645-117.21t-21-51Q624-198 645.21-219t51-21Q726-240 747-218.79t21 51Q768-138 746.79-117t-51 21ZM253-696l83 192h301l82-192H253Zm-31-72h570q14 0 20.5 11t1.5 23L702.63-476.14Q694-456 676.5-444T637-432H317l-42 72h493v72H276q-43 0-63.5-36.15-20.5-36.16.5-71.85l52-90-131-306H48v-72h133l41 96Zm114 264h301-301Z"/></svg></button>
+            </div>
+        </div>
+    </div>
+    <div class="focontainer">
+        <button id="openbtn"><svg xmlns="http://www.w3.org/2000/svg" aria-label="Open Cart"  height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM246-720l96 200h280l110-200H246Zm-38-80h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Zm134 280h280-280Z"/></svg></button>
+        <div class="FullOrder" id="FullOrder">
+            <div>
+                <table id="cart">
+                    <thead>
+                    <tr>
+                        <th></th>
+                        <th id="name">Name</th>
+                        <th id="quant">Quantity</th>
+                        <th id="PP">Price</th>
+                        <th></th>
+                    </tr>
+                    </thead>   
+                    <tbody id="cartbod">
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>Total Price</td>
+                            <td></td>
+                            <td></td>       
+                            <td id="cartfoot" colspan="4"></td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <div class="btnwrapper">
+                    <button id="addfav" class="orderbtn">Add Favourite</button>
+                    <button id="submit" class="orderbtn">Submit Order</button>
+                    <button id="loadfav" class="orderbtn">Load Favourite</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="test.js" defer></script>
+    <script src="vanity.js" defer></script>
 </body>
 </html>

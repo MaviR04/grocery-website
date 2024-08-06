@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="test.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <div class="text">Grocies</div>
+        </div>
+    <div class="topnavcont">
+    <label for="meow" id="btn"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></label>
+    <input type="checkbox" name="" id="meow">
+    <nav class="topnav">
+        <a href="index.html">Home</a>
+        <a href="aboutus.html">About Us</a>
+        <div class="dropdown">
+        <a href=#>Products</a>
+        <div class="dropcontent">
+            <a href="dairy.html">Dairy</a>
+            <a href="makeup.html">Makeup</a>
+            <a href="vegetables.html">Produce</a>
+        </div>
+        </div>
+        <a href="order.html">Order</a>  
+        <a href="loyalty.html">Loyalty Progam</a>
+    </nav>
+    </div>    
+    </header>
+    
+    <div class="EvWrapper" id="EvWrapper">
+        <div>
+        <table id="check" border="1">
+            <tr>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Quantity</th>
+                 <th>Price</th>
+            </tr>
+            <tbody id="checkbod">
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td</td>
+                    <td>Total Price</td>
+                    <td id="checkfoot" colspan="4"></td>
+                </tr>
+            </tfoot>
+
+        </table>
+        </div>
+        <div class="form">
+        <form action="" id="form">
+            <div class="set">
+                <div class="subheading">Personal <br>Information</div>    
+                <label for="fname">First Name: </label>
+                <input type="text" id="fname" name="fname" required>
+
+                <label for="lname">Last Name: </label>
+                <input type="text" id="lname" name="lname" required>
+
+                <label for="Phone no">Phone Number: </label>
+                <input type="tel" name="t-no" id="t-no" pattern="[0-9]{10}" required>
+
+                <label for="email">Email Address: </label>
+                <input type="email" name="email" id="email" required>
+            </div>
+
+            <div class="subheading">Billing Information</div>
+            <div class="billing set">
+
+                <label for="zip">Zipcode</label>
+                <input type="text" name="zipcode" id="zipcode" required>
+                
+                <label for="pay_meth" id="pay" class="head-label">Payment Method</label>    
+                <div class="pay-meth">
+                    <div>
+                    <input type="radio" name="pay-meth" id="credit-card" value="card" required>
+                    <label for="card">Credit/Debit Card</label>
+                    </div>
+                    <div>
+                    <input type="radio" name="pay-meth" id="COD" value="cash" required>
+                    <label for="cod">Cash On delivery</label>
+                    </div>
+                </div>
+               <div class="set" id="carddeets">
+                    <label for="">Card Number:</label>
+                    <input type="text" name="" id="CardNo" placeholder="xxxx-xxxx-xxxx-xxxx">
+                    <label for="">CVV</label>
+                    <input type="text" name="" id="CvNo">
+                    <label for="">Expiration Date</label>
+                    <input type="date" name="" id="">
+                </div>
+            </div>
+            <div class="set">
+                
+                <div class="subheading">Shipping Information</div>
+                <div x-data="{open:false}" class="shipping set">
+                    <label for="rec-method" class="head-label">Method of Receiving</label>
+                    <div>
+                    <input type="radio" name="meth" id="pick" value="false">
+                    <label for="Pickup">Pick up from store</label>
+                    </div>
+                    <div>
+                    <input type="radio" name="meth" id="del" value="true">
+                    <label for="Del">Delivery</label>
+                    </div>
+                    <label for="city" id="select">City: </label>
+                    <select name="city" id="city">
+                        <option value="Kandy"> Kandy </option><option>
+                            </option><option value=" Matale"> Matale </option><option>
+                            </option><option value=" Nuwara Eliy">  Nuwara Eliya</option><option>
+                            </option><option value="Ampara "> Ampara</option><option>
+                            </option><option value="Batticaloa"> Batticaloa </option><option>
+                            </option><option value=" Trincomalee">  Trincomalee </option><option>
+                            </option><option value="Anuradhapura"> Anuradhapura </option><option>
+                            </option><option value=" Polonnaruwa">  Polonnaruwa </option><option>
+                            </option><option value="Jaffna"> Jaffna </option><option>
+                            </option><option value=" Kilinochchi">  Kilinochchi </option><option>
+                            </option><option value=" Mannar">  Mannar </option><option>
+                            </option><option value=" Mullaitivu">  Mullaitivu </option><option>
+                            </option><option value=" Vavuniya">  Vavuniya </option><option>
+                            </option><option value="Kurunegala"> Kurunegala </option><option>
+                            </option><option value=" Puttalam">  Puttalam </option><option>
+                            </option><option value="Kegalle"> Kegalle </option><option>
+                            </option><option value=" Ratnapura">  Ratnapura </option><option>
+                            </option><option value="Galle"> Galle </option><option>
+                            </option><option value=" Hambantota">  Hambantota </option><option>
+                            </option><option value=" Matara">  Matara </option><option>
+                            </option><option value="Badulla"> Badulla </option><option>
+                            </option><option value=" Monaragala">  Monaragala </option><option>
+                            </option><option value="Colombo"> Colombo </option><option>
+                            </option><option value=" Gampaha">  Gampaha </option><option>
+                            </option><option value=" Kalutara">  Kalutara </option><option>
+                    </option></select>
+
+                <div>
+                    <div id="del-addy">
+                    <label for="delivery-notes">Delivery Address</label><br>
+                    <textarea name="delivery-notes" id="address" cols="50" rows="5"></textarea>
+                    </div>
+                </div>
+                    <label for="sec-phone">Secondary phone number(optional)</label>
+                    <input type="tel" name="sec-phone" id="sec-phone">
+                </div>
+                <button type="submit" id="payport">Order</button>
+            </div>
+        
+        </form>
+        </div>
+</div>
+    <script src="check.js"></script>
+</body>
+</html>

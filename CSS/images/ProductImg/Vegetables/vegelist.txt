@@ -1,0 +1,12 @@
+bellpep.jpg
+broccoli.webp
+cabbage.jpg
+carrot.webp
+leeks.jpeg
+mushroom.jpg
+redonion.jpg
+tomato.jpg
+vegeback.jpg
+vegeback.webp
+vegelist.txt
+zuchh.jpg

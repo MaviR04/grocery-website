@@ -1,0 +1,7 @@
+beef.png
+chicken.png
+meat.txt
+mutton.png
+pork.jpg
+pork.png
+tuna.png
