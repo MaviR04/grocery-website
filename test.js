@@ -9,7 +9,7 @@ the items, with the items themselves being objects.
 
 
 
-order = []
+const order = []
 let item_temp
 let names = document.querySelectorAll('.name')
 let prices = document.querySelectorAll('.price')
@@ -87,12 +87,14 @@ window.addEventListener("load",MainRuntime)
 
 
 
-
-
-submitBtn.addEventListener('click',function(){
-    saveOrder();
+function SubmissionRedirect(){
+    let submitted = saveOrder();
+    if(submitted){
     window.location.href="check.html"
-})
+    }
+}
+
+submitBtn.addEventListener('click',SubmissionRedirect)
 
 addFavbtn.addEventListener('click',function(){
     saveOrder()
@@ -206,9 +208,15 @@ function saveOrder(){
         col = rows[i].childNodes;
         addItem(col[1].innerHTML,col[2].firstChild.value,col[3].innerHTML,col[0].childNodes[0].src);
     }
+    if(order.length == 0){
+        alert("Hey, your order seems to be empty. Try adding some items!")
+    }
+    else{
     localStorage.setItem('order',JSON.stringify(order))
     localStorage.setItem('isKgArr',JSON.stringify(isKgArr))
     console.log(order)
+    return true
+    }
 }
 
 function calculatePrice(tf){

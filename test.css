@@ -136,7 +136,7 @@ h2{
     font-size: 20px;
     font-weight: 600;
 }
-.card:hover .counter{
+.card:hover .counter, .card:active .counter{
     height: 17px;
     opacity: 1;
 }
@@ -160,7 +160,7 @@ h2{
     align-self: flex-end;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    font: 'poppins';
+    font-family: 'poppins';
     font-size: 16px;
     color: #ffffff;
     text-align: center;
@@ -231,6 +231,8 @@ h2{
     position: fixed;
     top: 0;
     right: 0;
+    z-index: 5;
+
 }
 
 .FullOrder{
@@ -324,7 +326,6 @@ table img{
     font-size: 19px;
     font-family: 'poppins';
     display: grid;
-    place-content: left;
     row-gap: 10px;
     margin-top: 20px;
   }
@@ -482,12 +483,26 @@ table img{
         transform: translateY(0);
         
     }
+
+    table th{
+        display: none;
+    }
+
+    table{
+        width: 100%;
+    }
     table tbody tr, table tfoot tr{
+        border-bottom: 3px solid #474df0;
+        width: 100%;
+    }
+
+    table tbody tr td,table tfoot tr td{
+        max-width: unset;
+        text-align: center;
         border: 0;
     }
 
     table tr {
-        border-bottom: 3px solid #ddd;
         display: block;
         margin-bottom: .625em;
         border: 0;
@@ -501,18 +516,14 @@ table img{
         border: 0;
       }
       
-      table td::before {
-        /*
-        * aria-label has no advantage, it won't be read inside a table
-        content: attr(aria-label);
-        */
-        content: attr(data-label);
-        float: left;
-        font-weight: bold;
-        text-transform: uppercase;
+      .hide{
+        display: none;
       }
-      
 
-    
+    .EvWrapper{
+        flex-wrap: wrap;
+        margin: 50px;
+        gap: 50px;
+    }
 
 }
