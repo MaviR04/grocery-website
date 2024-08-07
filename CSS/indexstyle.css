@@ -175,8 +175,8 @@ body{
     border-radius: 20px;
     transition: all .3s;
     animation: popin 0.5s;
-    animation-timeline: view();
-    animation-range:entry;
+    
+    
 
 }
 
@@ -192,8 +192,6 @@ body{
     padding:1px;
     gap: 20px;
     animation: popin 2s;
-    animation-timeline: view();
-    animation-range:entry 700px;
 
 }
 .para img{
@@ -309,7 +307,7 @@ body{
     margin-top: 150px;
     font-family: poppins;
     animation: popin 2s;
-    animation-timeline: view();
+    
 }
 
 .commentWrapper{
@@ -364,34 +362,34 @@ body{
 
 #com1{
     animation: slideinleft 0.5s;
-    animation-timeline: view();
+    
     grid-area: com1;
 }
 
 #com2{
     animation: slideinright 0.5s;
-    animation-timeline: view();
+    
     grid-area: com2;
 }
 
 #com3{
     animation: slideinleft 0.5s;
-    animation-timeline: view();
+    
     grid-area: com3;
  }
  
  
 #com4{
     animation: slideinright 0.5s;
-    animation-timeline: view();
+    
     grid-area: com4;
  }
 
  
 #com5{
     animation: slideinleft 0.5s;
-    animation-timeline: view();
-    animation-range:entry ;
+    
+    ;
     grid-area: com5;
  }
 
@@ -499,7 +497,7 @@ body{
     
     #com4{
         animation: slideinright 0.5s;
-        animation-timeline: view();
+        
         grid-area: com4;
      }
 
