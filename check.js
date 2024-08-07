@@ -57,8 +57,16 @@ function calculatePrice(tf){
 
 function DeliveryDate(){
     let date = new Date() 
-    const minDate = `${months[date.getMonth()]}  ${date.getDate()+2} , ${date.getFullYear()} `
-    const maxDate = `${months[date.getMonth()]}  ${date.getDate()+4} , ${date.getFullYear()} `
+    let minDay = date.getDate()+2;
+    let maxDay = date.getDate()+2;
+    let Month = date.getMonth()
+    if(minDay>31 && maxDay>31){
+        Minday -= 31;
+        maxDay -= 31;
+        Month = date.getMonth()+1
+    }
+    const minDate = `${months[Month]}  ${minDay} , ${date.getFullYear()} `
+    const maxDate = `${months[Month]}  ${minDay} , ${date.getFullYear()} `
     const message = `Thank you for Ordering! <br> Your order will be delivered between ${minDate} and ${maxDate}`
     body.innerHTML = message;
     body.classList.add("after")

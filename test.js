@@ -196,6 +196,7 @@ async function removeItem(i,x){
         console.log(DBcount,'in func')
         console.log(delbuttons)
 
+
     })
 }
 
