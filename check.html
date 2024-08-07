@@ -60,7 +60,7 @@
         </table>
         </div>
         <div class="form">
-        <form action="" id="form">
+        <form  id="form">
             <div class="set">
                 <div class="subheading">Personal <br>Information</div>    
                 <label for="fname">First Name: </label>
@@ -69,7 +69,7 @@
                 <label for="lname">Last Name: </label>
                 <input type="text" id="lname" name="lname" required>
 
-                <label for="Phone no">Phone Number: </label>
+                <label for="t-no">Phone Number: </label>
                 <input type="tel" name="t-no" id="t-no" pattern="[0-9]{10}" required>
 
                 <label for="email">Email Address: </label>
@@ -90,63 +90,63 @@
                     </div>
                     <div>
                     <input type="radio" name="pay-meth" id="COD" value="cash" required>
-                    <label for="cod">Cash On delivery</label>
+                    <label for="COD">Cash On delivery</label>
                     </div>
                 </div>
                <div class="set" id="carddeets">
-                    <label for="">Card Number:</label>
-                    <input type="text" name="" id="CardNo" placeholder="xxxx-xxxx-xxxx-xxxx">
-                    <label for="">CVV</label>
-                    <input type="text" name="" id="CvNo">
-                    <label for="">Expiration Date</label>
-                    <input type="date" name="" id="">
+                    <label for="CardNo">Card Number:</label>
+                    <input type="text" name="CardNo" id="CardNo" placeholder="xxxx-xxxx-xxxx-xxxx">
+                    <label for="CvNo">CVV</label>
+                    <input type="text" name="CardNo" id="CvNo">
+                    <label for="ExpDate">Expiration Date</label>
+                    <input type="date" name="ExpDate" id="ExpDate">
                 </div>
             </div>
             <div class="set">
                 
                 <div class="subheading">Shipping Information</div>
-                <div x-data="{open:false}" class="shipping set">
-                    <label for="rec-method" class="head-label">Method of Receiving</label>
+                <div class="shipping set">
+                    <label class="head-label">Method of Receiving</label>
                     <div>
                     <input type="radio" name="meth" id="pick" value="false">
-                    <label for="Pickup">Pick up from store</label>
+                    <label for="pick">Pick up from store</label>
                     </div>
                     <div>
                     <input type="radio" name="meth" id="del" value="true">
-                    <label for="Del">Delivery</label>
+                    <label for="del">Delivery</label>
                     </div>
                     <label for="city" id="select">City: </label>
                     <select name="city" id="city">
-                        <option value="Kandy"> Kandy </option><option>
-                            </option><option value=" Matale"> Matale </option><option>
-                            </option><option value=" Nuwara Eliy">  Nuwara Eliya</option><option>
-                            </option><option value="Ampara "> Ampara</option><option>
-                            </option><option value="Batticaloa"> Batticaloa </option><option>
-                            </option><option value=" Trincomalee">  Trincomalee </option><option>
-                            </option><option value="Anuradhapura"> Anuradhapura </option><option>
-                            </option><option value=" Polonnaruwa">  Polonnaruwa </option><option>
-                            </option><option value="Jaffna"> Jaffna </option><option>
-                            </option><option value=" Kilinochchi">  Kilinochchi </option><option>
-                            </option><option value=" Mannar">  Mannar </option><option>
-                            </option><option value=" Mullaitivu">  Mullaitivu </option><option>
-                            </option><option value=" Vavuniya">  Vavuniya </option><option>
-                            </option><option value="Kurunegala"> Kurunegala </option><option>
-                            </option><option value=" Puttalam">  Puttalam </option><option>
-                            </option><option value="Kegalle"> Kegalle </option><option>
-                            </option><option value=" Ratnapura">  Ratnapura </option><option>
-                            </option><option value="Galle"> Galle </option><option>
-                            </option><option value=" Hambantota">  Hambantota </option><option>
-                            </option><option value=" Matara">  Matara </option><option>
-                            </option><option value="Badulla"> Badulla </option><option>
-                            </option><option value=" Monaragala">  Monaragala </option><option>
-                            </option><option value="Colombo"> Colombo </option><option>
-                            </option><option value=" Gampaha">  Gampaha </option><option>
-                            </option><option value=" Kalutara">  Kalutara </option><option>
-                    </option></select>
+                        <option value="Kandy"> Kandy </option>
+                          <option value=" Matale"> Matale </option>
+                          <option value=" Nuwara Eliy">  Nuwara Eliya</option>
+                          <option value="Ampara "> Ampara</option>
+                          <option value="Batticaloa"> Batticaloa </option>
+                          <option value=" Trincomalee">  Trincomalee </option>
+                          <option value="Anuradhapura"> Anuradhapura </option>
+                          <option value=" Polonnaruwa">  Polonnaruwa </option>
+                          <option value="Jaffna"> Jaffna </option>
+                          <option value=" Kilinochchi">  Kilinochchi </option>
+                          <option value=" Mannar">  Mannar </option>
+                          <option value=" Mullaitivu">  Mullaitivu </option>
+                          <option value=" Vavuniya">  Vavuniya </option>
+                          <option value="Kurunegala"> Kurunegala </option>
+                          <option value=" Puttalam">  Puttalam </option>
+                          <option value="Kegalle"> Kegalle </option>
+                          <option value=" Ratnapura">  Ratnapura </option>
+                          <option value="Galle"> Galle </option>
+                          <option value=" Hambantota">  Hambantota </option>
+                          <option value=" Matara">  Matara </option>
+                          <option value="Badulla"> Badulla </option>
+                          <option value=" Monaragala">  Monaragala </option>
+                          <option value="Colombo"> Colombo </option>
+                          <option value=" Gampaha">  Gampaha </option>
+                          <option value=" Kalutara">  Kalutara </option>
+                  </select>
 
                 <div>
                     <div id="del-addy">
-                    <label for="delivery-notes">Delivery Address</label><br>
+                    <label for="address">Delivery Address</label><br>
                     <textarea name="delivery-notes" id="address" cols="50" rows="5"></textarea>
                     </div>
                 </div>
