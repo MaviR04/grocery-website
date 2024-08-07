@@ -171,7 +171,7 @@ body{
 .cardhead{
     font-size: 25px;
     font-weight: 500;
-    font-size: 18;
+    
 }   
 
 .cards:hover,.cards:active{
@@ -215,7 +215,7 @@ body{
     align-self: flex-end;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    font: 'poppins';
+    font-family: 'poppins';
     font-size: 20px;
     color: #f1f1f1;
     text-align: center;
