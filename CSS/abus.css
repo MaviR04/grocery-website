@@ -168,7 +168,7 @@ body{
 
 #amster .heading{
     color: rgb(240, 19, 19);
-    mix-blend-mode:plus-lighter;
+    mix-blend-mode:color-dodge;
 }
 
 #col{
@@ -180,7 +180,7 @@ body{
 
 #col .heading{
     color: #eecc16;
-    mix-blend-mode:plus-lighter;
+    mix-blend-mode:color-dodge;
 }
 .location .desc{
     margin-left: 10px;
@@ -235,7 +235,7 @@ thead tr th{
     padding-right: 50px;
     font-size: 35px;
     color: #ffea79;
-    mix-blend-mode: plus-lighter;
+    mix-blend-mode: color-dodge;
     border-bottom: 4px solid white;
 }
 
@@ -423,7 +423,7 @@ tfoot{
         padding-right: 50px;
         font-size: 30px;
         color: #ffea79;
-        mix-blend-mode: plus-lighter;
+        mix-blend-mode: color-dodge;
     }
 
     table tbody tr td:nth-child(2)::before{
@@ -432,7 +432,7 @@ tfoot{
         font-weight: 600;
         font-size: 30px;
         color: #ffea79;
-        mix-blend-mode: plus-lighter;
+        mix-blend-mode: color-dodge;
     }
 
     table tbody tr td:nth-child(3)::before{
@@ -440,10 +440,10 @@ tfoot{
         text-align: center;
         font-weight: 600;
         padding-left: 50px;
-        padding-right: 55x;
+        padding-right: 55px;
         font-size: 30px;
         color: #ffea79;
-        mix-blend-mode: plus-lighter;
+        mix-blend-mode: color-dodge;
     }
 
     .table tr td:last-of-type{
