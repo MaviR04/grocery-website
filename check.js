@@ -8,13 +8,23 @@ const months = ["January", "February", "March", "April", "May", "June", "July", 
 const submitbtn = document.getElementById("payport")
 const body = document.getElementById("EvWrapper")
 const form = document.getElementById("form")
+const CardNo = document.getElementById("CardNo")
+const CVno = document.getElementById("CvNo")
+const ExpDate = document.getElementById("ExpDate")
 
 function creditCard(){
     if(this.value=="card"){
         card.classList.add("show")
+        CardNo.required = true;
+        CVno.required = true;
+        ExpDate.required = true;
+        
     }
     else{
         card.classList.remove("show")
+        CardNo.required = false;
+        CVno.required = false;
+        ExpDate.required = false;
     }
 
 }
@@ -22,7 +32,7 @@ function creditCard(){
 creditoption.forEach(radio=>radio.addEventListener('change',creditCard))
 
 
-
+//alternate version of display function
 function DisplayOrderCheckOut(){
     for(i=0;i<order.length;i++){
         let tr= document.createElement('tr')
@@ -60,7 +70,7 @@ function DeliveryDate(){
     let minDay = date.getDate()+2;
     let maxDay = date.getDate()+2;
     let Month = date.getMonth()
-    if(minDay>31 && maxDay>31){
+    if(minDay>31 && maxDay>31){ //this is if the day is a month end
         Minday -= 31;
         maxDay -= 31;
         Month = date.getMonth()+1

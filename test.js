@@ -9,18 +9,18 @@ the items, with the items themselves being objects.
 
 
 
-const order = []
+let order = []
 let item_temp
-let names = document.querySelectorAll('.name')
-let prices = document.querySelectorAll('.price')
-let count = document.querySelectorAll('.counter')
+const names = document.querySelectorAll('.name')
+const prices = document.querySelectorAll('.price')
+const count = document.querySelectorAll('.counter')
 const images = document.querySelectorAll('img')
-let button = document.querySelectorAll('.btn')
+const button = document.querySelectorAll('.btn')
 let itemCount =button.length;
 let delbuttons = []
-let table=document.getElementById('cart')
-let tb = document.getElementById('cartbod')
-let tf = document.getElementById('cartfoot')
+const table=document.getElementById('cart')
+const tb = document.getElementById('cartbod')
+const tf = document.getElementById('cartfoot')
 const submitBtn = document.getElementById('submit')
 let initial = false
 let picked = []
@@ -65,18 +65,18 @@ let xs = 0
 let DBcount = 0
 let displaycount = 0
 
-
+//runs on page load and adds button listeners to thebuttons
 function MainRuntime(){
     for(let i=0;i<itemCount;i++){
         picked[i]=false
         button[i].addEventListener('click',function(e){
             if(picked[i]==false){
-                let caller = e.target                                               //this makes sure that you can only press buttons once to avoid dupe items  
-                pullItem(i);
-                picked[i]=true
-                DisplayOrder(tb,caller)
-                removeItem(DBcount,i)
-                calculatePrice(tf)
+                let caller = e.target                                               
+                pullItem(i);                         //pulls the info from the item which was clicked
+                picked[i]=true                       //sets that this item was picked in the array
+                DisplayOrder(tb,caller)              //displays the order
+                removeItem(DBcount,i)                //adds the delete item event listener to the delete buttons 
+                calculatePrice(tf)                  
                 DBcount++
             }
         })
@@ -93,32 +93,31 @@ function SubmissionRedirect(){
     window.location.href="check.html"
     }
 }
-
-submitBtn.addEventListener('click',SubmissionRedirect)
-
-addFavbtn.addEventListener('click',function(){
+function SetLocalStorage(){
     saveOrder()
     localStorage.setItem('picked',JSON.stringify(picked))
     localStorage.setItem('favOrder',JSON.stringify(order))
+}
 
-})
+submitBtn.addEventListener('click',SubmissionRedirect)
 
+addFavbtn.addEventListener('click',SetLocalStorage)
 
-loadFavbtn.addEventListener('click',function(){
+//event listener for the load favourite function. had to put it in an anonimous function to pass in parameters
+loadFavbtn.addEventListener('click',function(){                   
     loadFav(tb,tf)
 })
 
-
+//checks if the item that was added is unit item or a kg item
 function isKg(e,td,tr){
     console.log(e.parentElement)
     let buttonclass = e.parentElement.classList
-    console.log(buttonclass)
+    //checks if the button the event is called on has the "kg" class and appends kg to it 
     if(buttonclass.contains('kg')){
-        console.log("buttonclass there")
         const kg =document.createTextNode(" KG")
         td.appendChild(kg)
-        tr.classList.add('float')
-        isKgArr.push(true)
+        tr.classList.add('float') //adds a class called "float" which is checked in the calculatePrice() function
+        isKgArr.push(true)   //pushes if an item is kg or not to an array which is used when loading favourites in 
     }
     else{
         isKgArr.push(false)
@@ -126,6 +125,7 @@ function isKg(e,td,tr){
     console.log(isKgArr)
 }
 
+//checks the iskgarr list for whether the items that are being loaded in are kg or not and appends 
 function isKgonLoad(i,td,tr){
     if(isKgArr[i]){
         const kg =document.createTextNode(" KG")
@@ -142,7 +142,7 @@ function DisplayOrder(tb,e){
     const info=['<img src="'+order[displaycount].img +'" alt="">', order[displaycount].itemName, order[displaycount].quantity,order[displaycount].price] //pulls the items from order array
     for(let x=0;x<info.length;x++){
         let td= tr.appendChild(document.createElement('td'));
-
+        //the if conditions check for certaion special iterations which matches the current <td> element being inserted
         if(x==2){
             let qvalue = document.createElement('input')
             qvalue.setAttribute('type','number')
@@ -163,7 +163,7 @@ function DisplayOrder(tb,e){
         td.innerHTML = info[x]
         }
 
-        if(x>=3){
+        if(x>=3){   //creates the delete button here
             let delbutton = document.createElement('button')
             delbutton.innerHTML = 'X'
             let delcon = document.createElement('td')
@@ -181,10 +181,10 @@ function DisplayOrder(tb,e){
 
 async function removeItem(i,x){
     delbuttons[i].addEventListener('click',async function(event){
-        let gyatt = event.target
-        gyatt.parentElement.parentElement.style.animation = "LoadOut 280ms"
+        let delclick = event.target
+        delclick.parentElement.parentElement.style.animation = "LoadOut 280ms"
         await sleep(260)                                              //stops the instant removal of the table row 
-        gyatt.parentElement.parentElement.remove()       //remove the table row(goes up two elements)
+        delclick.parentElement.parentElement.remove()       //remove the table row(goes up two elements)
         picked[x] = false                  //resets the flag so that the item can be picked again
         console.log(picked)
         DBcount--                          
@@ -199,24 +199,24 @@ async function removeItem(i,x){
 
     })
 }
-
-function saveOrder(){
+ //converts the order into an array
+function saveOrder(){                                       
     order.length = 0;
-    let rows = tb.childNodes;
-    let col;
+    let rows = tb.childNodes; //gets all the rows in the table body
+    let col;    
 
     for(let i=1;i<rows.length;i++){
-        col = rows[i].childNodes;
+        col = rows[i].childNodes;                               //gets all the td elements in the current row iteration
         addItem(col[1].innerHTML,col[2].firstChild.value,col[3].innerHTML,col[0].childNodes[0].src);
     }
+    //validation for if there is actually items in the order
     if(order.length == 0){
         alert("Hey, your order seems to be empty. Try adding some items!")
     }
     else{
     localStorage.setItem('order',JSON.stringify(order))
     localStorage.setItem('isKgArr',JSON.stringify(isKgArr))
-    console.log(order)
-    return true
+    return true       //returns true if its a valid order
     }
 }
 
@@ -228,6 +228,7 @@ function calculatePrice(tf){
     for(let i=1;i<rows.length;i++){
         col = rows[i].childNodes;
         console.log(col)
+        //checks if the current contains class float. makes it possible to add decimal point values 
         if(rows[i].classList.contains('float')){
             totalPrice += Number(col[2].firstChild.value)*Number(col[3].innerHTML)
         }
@@ -240,6 +241,7 @@ function calculatePrice(tf){
     tf.innerHTML = totalPrice
 }
 
+//fetches the favourites from local storage
 function loadFav(tb){ 
     displaycount = 0;
     order = JSON.parse(localStorage.getItem('favOrder'))
